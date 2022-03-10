@@ -4,7 +4,7 @@
 
 I'm me.
 
-## Here's some code
+## here's some code
 
 ```python
 from sidekick.autobob import AutoBob
