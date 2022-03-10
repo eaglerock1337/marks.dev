@@ -1,6 +1,6 @@
 # marks.dev
 
-Content for my homepage, [www.marks.dev](www.marks.dev).
+Content for my homepage, [marks.dev](https://marks.dev).
 
 ## the basic idea
 
