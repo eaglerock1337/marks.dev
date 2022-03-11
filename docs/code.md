@@ -1,6 +1,6 @@
 # code
 
->This page is a placeholderr for now. Eventually I'm going to list my favorite code projects, but for now, here's some random code I wrote:
+>This page will eventually highlight my favorite coding projects, but for now, here's something random:
 
 ```python
 import random
@@ -92,3 +92,5 @@ if __name__ == "__main__":
         answer = get_on_my_horse(horses)
         assert answer == top_three(horses)
 ```
+
+Ooh, pretty syntax highlighting!
