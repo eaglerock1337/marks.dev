@@ -1,6 +1,6 @@
 # about me
 
-*"I'm me"* <sub>~ me</sub>
+*"I'm me."* <sub>~ me</sub>
 
 > Yes, this site is very much in the works!
 
