@@ -1,10 +1,10 @@
 # code
 
-:shipit: Shippin' it. :shipit:
+### <sub>*shippin' it*</sub> :shipit: {docsify-ignore}
 
 ?>This page will eventually highlight my favorite coding projects, but for now, here's something random:
 
-This looks way better in landscape on mobile, btw:
+Hold your phone sideways for this one:
 
 ```python
 import random
@@ -97,4 +97,4 @@ if __name__ == "__main__":
         assert answer == top_three(horses)
 ```
 
-Ooh, pretty syntax highlighting!
+Ooh, pretty syntax highlighting! :tada:
