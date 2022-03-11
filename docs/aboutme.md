@@ -1,6 +1,8 @@
 # about me
 
-> Yes, this is very much in the works!
+*"I'm me"* <sub>~ me</sub>
+
+> Yes, this site is very much in the works!
 
 I'm a Site Reliability Engineer in New Jersey. I've been running production Linux systems for over 15 years, and I specialize in Linux administration, containerization, and automation.
 
@@ -11,6 +13,12 @@ I'm a Site Reliability Engineer in New Jersey. I've been running production Linu
 - **Containerization** - Docker, Kubernetes, and Docker Compose
 - **Automation** - Jenkins, GitHub Actions, ArgoCD
 - **Programming** - Python, Bash, Go, JavaScript, Ruby
+
+## philosophies
+
+- DevOps principles
+- Everything as code
+- Automate all the things
 
 ## hobbies
 
@@ -36,3 +44,5 @@ if __name__ == "__main__":
     autobob.main_loop()
     autobob.close()
 ```
+
+Cow goes moo.
