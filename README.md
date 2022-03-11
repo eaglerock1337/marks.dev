@@ -4,10 +4,21 @@ Content for my homepage, [marks.dev](https://marks.dev).
 
 ## the basic idea
 
-Create a documentation-as-code based website through Docsify or an alternative such as Docusaurus.
+Create a documentation-as-code based website through Docsify for my domain.
 
 More to come later.
 
+## development
+
+```bash
+npm i docsify-cli -g
+cd docs
+docsify serve
+```
+
+This allows local preview and live editing of the site.
+
 ## credits
 
-Icon courtesy of [Online Web Fonts](https://www.onlinewebfonts.com/icon/462515).
+- Documentation-as-code courtesy of [Docsify](https://docsify.js.org).
+- Icon courtesy of [Online Web Fonts](https://www.onlinewebfonts.com/icon/462515).
