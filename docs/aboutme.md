@@ -2,11 +2,11 @@
 
 > Yes, this is very much in the works!
 
-I'm a Site Reliability Engineer in Fair Lawn, NJ. I've been running production systems for over 15 years, and I specialize in Linux, containerization, and automation.
+I'm a Site Reliability Engineer in New Jersey. I've been running production Linux systems for over 15 years, and I specialize in Linux administration, containerization, and automation.
 
 ## skills
 
-- **Linux** - all distros, but Debian and Ubuntu are my favorites
+- **Linux** - distro-agnostic, but I favor Debian/Ubuntu
 - **Infra-as-code** - Ansible, Terraform, Chef, Docsify
 - **Containerization** - Docker, Kubernetes, and Docker Compose
 - **Automation** - Jenkins, GitHub Actions, ArgoCD
@@ -18,7 +18,15 @@ I'm a Site Reliability Engineer in Fair Lawn, NJ. I've been running production s
 - vintage computers
 - writing programs to troll my friends
 
-## here's some code
+## some code
+
+### here's some code
+
+#### *[some code](code.md)*
+
+### here's some more code
+
+Why not?
 
 ```python
 from sidekick.autobob import AutoBob
