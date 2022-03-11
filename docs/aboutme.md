@@ -2,13 +2,13 @@
 
 *"I'm me."* <sub>~ me</sub>
 
-> Yes, this site is very much in the works!
+!> Yes, this site is very much in the works!
 
 I'm a Site Reliability Engineer in New Jersey. I've been running production Linux systems for over 15 years, and I specialize in Linux administration, containerization, and automation.
 
 ## skills
 
-- **Linux** - distro-agnostic, but I favor Debian/Ubuntu
+- **Linux** - distro-agnostic, but I favor Debian & Ubuntu
 - **Infra-as-code** - Ansible, Terraform, Chef, Docsify
 - **Containerization** - Docker, Kubernetes, and Docker Compose
 - **Automation** - Jenkins, GitHub Actions, ArgoCD
@@ -22,15 +22,15 @@ I'm a Site Reliability Engineer in New Jersey. I've been running production Linu
 
 ## hobbies
 
-- simracing
-- vintage computers
-- writing programs to troll my friends
+- :car:  simracing
+- :computer: vintage computers
+- :trollface: writing programs to troll my friends
 
 ## some code
 
 ### here's some code
 
-#### *[some code](code.md)*
+#### *[some code](code.md)* {docsify-ignore}
 
 ### here's some more code
 
@@ -45,4 +45,4 @@ if __name__ == "__main__":
     autobob.close()
 ```
 
-Cow goes moo.
+:cow: Cow goes moo.

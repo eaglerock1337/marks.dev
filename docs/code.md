@@ -1,6 +1,10 @@
 # code
 
->This page will eventually highlight my favorite coding projects, but for now, here's something random:
+:shipit: Shippin' it. :shipit:
+
+?>This page will eventually highlight my favorite coding projects, but for now, here's something random:
+
+This looks way better in landscape on mobile, btw:
 
 ```python
 import random
