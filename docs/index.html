@@ -21,11 +21,34 @@
       subMaxLevel: 6,
       homepage: 'aboutme.md',
       themeColor: '#264F78',
+      copyCode: {
+        buttonText : 'Copy me',
+        errorText  : 'Oops!',
+        successText: 'Copied!'
+      },
+      tabs: {
+        theme: 'material',
+        persist: false,
+      },
+      'flexible-alerts': {
+        style: 'flat',
+      },
+      autoFooter: {
+        name:       'Peter Marks',
+        copyYear:   2022,
+        url:        'https://marks.dev',
+        onBody:     true
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
   <style>
     :root {
       --theme-color             : rgb(83, 124, 211);
