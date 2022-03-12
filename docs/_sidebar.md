@@ -1,5 +1,5 @@
 <!-- markdownlint-disable-next-line first-line-heading -->
-- [about me](aboutme)
+- [home](/)
 - [code](code)
 - **Links**
   - [GitHub](https://github.com/eaglerock1337/)
