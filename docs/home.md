@@ -2,28 +2,26 @@
 
 *"I'm me."* <sub>~ me</sub>
 
->[!ATTENTION]
-> Yes, this site is very much in the works!
-
 I'm a Site Reliability Engineer in New Jersey. I've been running production Linux systems for over 15 years, and I specialize in Linux administration, containerization, and automation.
 
 <!-- tabs: start -->
 
 ## **skills**
 
-- **Linux** - distro-agnostic, but I favor Debian & Ubuntu
+- **Programming** - Python, Bash, Go, JavaScript, Ruby, C/C++
+- **Linux** - Distro-agnostic, but I favor Debian & Ubuntu
+- **Containers** - Docker, Kubernetes, and Docker Compose
 - **Infra-as-code** - Ansible, Terraform, Chef, Docsify
-- **Containerization** - Docker, Kubernetes, and Docker Compose
 - **Automation** - Jenkins, GitHub Actions, ArgoCD
-- **Programming** - Python, Bash, Go, JavaScript, Ruby
+- **DevOps** - DataDog, Splunk, Firehydrant, Backstage, PagerDuty
 
 ## **philosophies**
 
 - DevOps principles
 - Production readiness
 - Everything as code
-- Automate all the things
 - Documentation is key
+- Automate all the things
 
 ## **hobbies**
 
@@ -33,4 +31,6 @@ I'm a Site Reliability Engineer in New Jersey. I've been running production Linu
 
 <!-- tabs: end -->
 
-More to come!
+## more stuff
+
+Take a look at some of the [projects] I'm working on, some random [code](code) snippets I wrote, or check out my [GitHub](https://github.com/eaglerock1337/) page for more!

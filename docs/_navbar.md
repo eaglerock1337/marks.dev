@@ -1,2 +1,3 @@
 - [home](/)
+- [projects](projects)
 - [code](code)

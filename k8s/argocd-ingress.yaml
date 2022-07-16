@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: argocd
+  labels:
+    app: argocd
+  annotations:
+    kubernetes.io/ingress.class: public
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: argocd
+          servicePort: 80
