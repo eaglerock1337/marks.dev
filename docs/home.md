@@ -33,4 +33,4 @@ I'm a Site Reliability Engineer in New Jersey. I've been running production Linu
 
 ## more stuff
 
-Take a look at some of the [projects] I'm working on, some random [code](code) snippets I wrote, or check out my [GitHub](https://github.com/eaglerock1337/) page for more!
+Take a look at some of the [projects](projects) I'm working on, some random [code](code) snippets I wrote, or check out my [GitHub](https://github.com/eaglerock1337/) page for more!
