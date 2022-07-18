@@ -1,5 +1,6 @@
 # about me
 
+<!-- markdownlint-disable MD033 -->
 *"I'm me."* <sub>~ me</sub>
 
 I'm a Site Reliability Engineer in New Jersey. I've been running production Linux systems for over 15 years, and I specialize in Linux administration, containerization, and automation.

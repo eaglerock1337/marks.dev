@@ -1,9 +1,7 @@
 # code
 
+<!-- markdownlint-disable MD001 MD033 -->
 ### <sub>*shippin' it*</sub> :shipit: {docsify-ignore}<p></p>
-
->[!NOTE]
->This page will eventually showcase my favorite projects, but for now, here's some random code.
 
 > [!TIP]
 > Hold your phone sideways for this one.
