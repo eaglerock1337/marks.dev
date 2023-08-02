@@ -11,9 +11,9 @@ I'm a Site Reliability Engineer in New Jersey. I've been running production Linu
 
 - **Programming** - Python, Bash, Go, JavaScript, Ruby, C/C++
 - **Linux** - Distro-agnostic, but I favor Debian & Ubuntu
-- **Containers** - Docker, Kubernetes, and Docker Compose
+- **Containers** - Docker, Kubernetes, Helm, and Docker Compose
 - **Infra-as-code** - Ansible, Terraform, Chef, Docsify
-- **Automation** - Jenkins, GitHub Actions, ArgoCD
+- **Automation** - Azure Pipelines, Jenkins, GitHub Actions, ArgoCD
 - **DevOps** - DataDog, Splunk, Firehydrant, Backstage, PagerDuty
 
 ## **philosophies**
