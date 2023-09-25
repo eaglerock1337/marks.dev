@@ -62,47 +62,24 @@ cha_cha_reset () {
 cha_cha_options () {
   while [ $# -gt 0 ]; do
     case $1 in
-    -b | --basic-step)
-      basic_step=true ;;
-    -u | --funky-time)
-      funky_time=true ;;
-    -w | --work-time)
-      work_time=true ;;
-    -t | --turn-it)
-      turn_it=$2
-      shift ;;
-    -h | --hops)
-      hops_this_time=$2
-      shift ;;
-    -p | --hop-phrase)
-      hop_phrase=$2
-      shift ;;
-    -r | --repeat-hops)
-      repeat_hops=true ;;
-    -s | --stomp-string)
-      stomp_string=$2
-      shift ;;
-    -a | --stomp-again)
-      stomp_again=true ;;
-    -v | --reverse)
-      reverse=true ;;
-    -n | --charlie-brown)
-      charlie_brown=true ;;
-    -l | --slide)
-      slide=true ;;
-    -c | --criss-cross)
-      criss_cross=true ;;
-    -f | --freeze)
-      freeze=true ;;
-    -k | --hands-on-knees)
-      hands_on_knees=true ;;
-    -e | --end-phrase)
-      end_phrase=$2
-      shift ;;
-    -m | --cha-cha-time)
-      cha_cha_time=true ;;
-    -g | --cha-cha-again)
-      cha_cha_again=true ;;
+    -b | --basic-step)      basic_step=true           ;;
+    -u | --funky-time)      funky_time=true           ;;
+    -w | --work-time)       work_time=true            ;;
+    -t | --turn-it)         turn_it=$2;         shift ;;
+    -h | --hops)            hops_this_time=$2;  shift ;;
+    -p | --hop-phrase)      hop_phrase=$2;      shift ;;
+    -r | --repeat-hops)     repeat_hops=true          ;;
+    -s | --stomp-string)    stomp_string=$2;    shift ;;
+    -a | --stomp-again)     stomp_again=true          ;;
+    -v | --reverse)         reverse=true              ;;
+    -n | --charlie-brown)   charlie_brown=true        ;;
+    -l | --slide)           slide=true                ;;
+    -c | --criss-cross)     criss_cross=true          ;;
+    -f | --freeze)          freeze=true               ;;
+    -k | --hands-on-knees)  hands_on_knees=true       ;;
+    -e | --end-phrase)      end_phrase=$2;      shift ;;
+    -m | --cha-cha-time)    cha_cha_time=true         ;;
+    -g | --cha-cha-again)   cha_cha_again=true        ;;
     esac
     shift
   done
