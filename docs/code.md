@@ -246,7 +246,7 @@ cha_cha_knees () {
     for i in {1..2}; do
       echo "Hands on your knees!"; sleep 1
     done
-    for i in "" "Get funky with it " "Ohhh.... " "....yeah! " "Come on! "; do
+    for i in "" "Get funky with it " "Ohhh... " "...yeah! " "Come on! "; do
       if [ "$i" != "" ]; then echo $i; fi
       for i in {1..4}; do
         echo -n "🦵 "; sleep 0.5
