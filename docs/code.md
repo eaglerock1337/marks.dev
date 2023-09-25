@@ -300,13 +300,15 @@ cha_cha_slide () {
   cha_cha_verse --turn-it "out" --end-phrase "Cha cha now y'all"
   cha_cha_verse --funky-time --repeat-hops --stomp-string "two stomps" \
                 --slide --criss-cross --cha-cha-time
-  cha_cha_verse --work-time --hops 2 --repeat-hops --stomp-string "two stomps" \
-                --hands-on-knees --end-phrase "Cha cha now y'all" --cha-cha-time
-  cha_cha_verse --turn-it "out" --hops 5 --stomp-again --freeze --cha-cha-time
-  cha_cha_verse --turn-it "out" --repeat-hops --reverse --slide --cha-cha-again \
-                --end-phrase "Turn it out"
-  cha_cha_verse --hops 2 --hop-phrase "2 hops" --repeat-hops --charlie-brown --slide \
-                --end-phrase "Take it back now y'all 🔙"
+  cha_cha_verse --work-time --hops 2 --repeat-hops \
+                --hands-on-knees --stomp-string "two stomps" \
+                --end-phrase "Cha cha now y'all" --cha-cha-time
+  cha_cha_verse --turn-it "out" --hops 5 --stomp-again \
+                --freeze --cha-cha-time
+  cha_cha_verse --turn-it "out" --repeat-hops --reverse --slide \
+                --cha-cha-again --end-phrase "Turn it out"
+  cha_cha_verse --hops 2 --hop-phrase "2 hops" --repeat-hops --slide\
+                --charlie-brown --end-phrase "Take it back now y'all 🔙"
   echo "Cha cha now y'all"; sleep 2
 }
 
@@ -410,6 +412,8 @@ if __name__ == "__main__":
 ```go
 package main
 
+// Simulate a Comp Sci class with a teacher trying to avoid working.
+
 import (
     "fmt"
     "math/rand"
@@ -485,7 +489,7 @@ func student(wg *sync.WaitGroup, name string, hand chan Student) {
 }
 
 func classroom(class []string) {
-    var wg sync.WaitGroup      // Wait group for checking how many students are still working
+    var wg sync.WaitGroup      // Wait group for tracking students
     hand := make(chan Student) // Channel for Kim seeing raised hands
     fmt.Println("The bell has rung! Time for class!")
 
@@ -568,7 +572,7 @@ def run_simulation(sample_size=1000, exact_hit=False):
             if result:
                 successes[i] += 1
 
-    print(f"\n\nResults for sample size {sample_size} (Exact hit: {exact_hit}):")
+    print(f"\n\nResults for {sample_size} tests (Exact hit: {exact_hit}):")
     for i in range(DICE_SETS):
         print(f"\nUsing {i+1} sets of dice ({(i+1)*6} total):")
         print(f"  Total Hits: {successes[i]}")
@@ -656,11 +660,13 @@ func runSimulation(sampleSize int, exactHit bool) {
             }
         }
     }
-    fmt.Printf("\n\nResults for sample size %v (Exact hit: %v):\n", sampleSize, exactHit)
+    fmt.Printf("\n\nResults for sample size %v (Exact hit: %v):\n",
+               sampleSize, exactHit)
     for i := 1; i <= diceSets; i++ {
         fmt.Printf("\nUsing %v sets of dice (%v total):\n", i, i*6)
         fmt.Printf("  Total Hits: %v\n", successes[i-1])
-        fmt.Printf("  Winning Percentage: %.6v%%\n", float64(successes[i-1])/float64(sampleSize)*100.0)
+        fmt.Printf("  Winning Percentage: %.6v%%\n", 
+                   float64(successes[i-1])/float64(sampleSize)*100.0)
     }
 }
 
