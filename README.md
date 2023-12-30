@@ -12,11 +12,15 @@ More to come later.
 
 ```bash
 npm i docsify-cli -g
-cd docs
+cd docsify
 docsify serve
 ```
 
 This allows local preview and live editing of the site.
+
+## more documentation
+
+- [Bootstrapping hlc.marks.dev](docs/BOOTSTRAP.md)
 
 ## credits
 
