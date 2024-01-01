@@ -38,8 +38,60 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
 
 ### Stage 1.2 - Cluster setup thru Ansible
 
-- Refresh `ansible` repo and create `marks.dev` role to start configuration
-- Reorganize `marks.dev` repo to support future tooling and documentation needs
-- `marks.dev` role setup:
+- Refresh `ansible` repo and create `marks_dev` role to start configuration
+- Reorganize `marks_dev` repo to support future tooling and documentation needs
+- `marks_dev` role setup:
   - Create `bob` service user for cluster operations
-- 
+- Initial run:
+  - Need to set `remote_user: root` to plays in `marks.dev.yml`
+  - Install python3 & pip3: `for i in 401 402 403 404 301 302 303 304 305 306 307 308; do ssh root@hlc-$i.marks.dev "apt update && apt install -y python3 python3-pip"; done`
+  - Get `common` role installed
+  - Debug `marks_dev` role for installing `bob` user
+  - Add installing Docker to setup
+  - Add installing Python3 as well
+  - Until I get handlers setup: `for i in 401 402 403 404 301 302 303 304 305 306 307 308; do ssh root@hlc-$i.marks.dev reboot; done`
+  - Got Kubernetes installed with `containerd` as the CRI
+
+### Stage 1.3 - Attempted boostrapping with standard Kubernetes
+
+- First bootstrapping
+  - log in as `bob` on `hlc-401.marks.dev`
+  - copy over `kubeadm-config.yaml` file
+  - `sudo kubeadm init --config kubeadm-config.yaml`
+  - move `/etc/kubernetes/admin.conf` to `/home/bob/.kube/config`
+  - `kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml`
+  - `for i in 402 403 404 301 302 303 304 305 306 307 308; do ssh root@hlc-$i.marks.dev kubeadm join 10.23.50.41:6443 --token builda.happylittlecloud --discovery-token-ca-cert-hash sha256:87ce29360abc518d6a0e74fee99bb53e66858ee6da89e8c6015905eeb8616248; done`
+- Troubleshooting
+  - deployed k8s `1.29.0` and `1.26.12` with constant `CrashLoopBackOff`s
+  - issue seems to be due to resource constraints
+  - attempt to install k3s with the ansible playbook 
+  - distributed setup did not work
+  - attempting now with k3s manually after configuring shared storage
+
+### Stage 1.4 - Different approach with k3s
+
+- Configuring NFS
+  - install `nfs-kernel-server` and `xfsprogs` on hlc-401
+  - add `ntp` and server updating to ansible playbooks
+  - create xfs partition on `/dev/sda1`
+  - create `/data` directory and mount partition to it
+  - xfs caused i/o errors, defaulted to ext4
+  - nfs server ready to share
+  - looking at `nfs-subdir-external-provisioner` as an on-cluster storage solution
+- Starting up k3s
+  - `ssh-copy-id bob@hlc-###.marks.dev`
+  - already present due to attempted ansible playbook
+  - needed to try once and fail, run `k3s-uninstall.sh`, then try command again:
+  - `curl -sfL https://get.k3s.io | K3S_TOKEN=<redacted> sh -s - server --cluster-init`
+  - `cat /var/lib/rancher/k3s/server/node-token` to get full token
+  - Now, create 3 more control plane nodes from the rpi4s:
+  - `curl -sfL https://get.k3s.io | K3S_TOKEN=<redacted> sh -s - server --server https://hlc-401.marks.dev:6443`
+  - To remove etcd, I had to uninstall k3s on hlc-401 and run:
+  - `curl -sfL https://get.k3s.io | K3S_TOKEN=<redacted> sh -s - server --disable-etcd --write-kubeconfig-mode=644 --server https://hlc-402.marks.dev:6443`
+  - The rest of the servers (301-308):
+  - `curl -sfL https://get.k3s.io | K3S_TOKEN=<redacted> sh -s - agent --server https://hlc-401.marks.dev:6443`
+  - Labeling:
+    - `kubectl label node hlc-401.marks.dev node-role.kubernetes.io/nfs=true`
+    - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/agent=true; done`
+    - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/agent-; done`
+    - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/worker=true; done`
