@@ -95,3 +95,15 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
     - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/agent=true; done`
     - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/agent-; done`
     - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/worker=true; done`
+
+### Stage 1.5 - Filling out core functionality
+
+- What's left:
+  - Still need to install `nfs-subdir-external-provisioner`
+  - Need to determine where etcd is storing its crap and use a USB key to supplement storage
+  - `/var/lib/rancher` seems to be the culprit...worth exploring a solution
+    - Use 4 USB3.0 drives for this (all 4 control planes)
+  - Need to determine a load-balancing solution
+    - MetalLB is an option - [metallb.universe.tf](https://metallb.universe.tf/)
+  - ArgoCD
+  - All the rest thru Argo
