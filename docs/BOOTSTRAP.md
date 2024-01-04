@@ -24,6 +24,12 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
 
 ## Stage 1 - Initial Deployment
 
+- Stage goals:
+  - Get a 12-node Kubernetes cluster online in 2023.
+  - Abandon Ubuntu configurations for Debian 12 base OS
+  - Deploy the cluster via k3s, standard k8s binaries, or alternate method
+  - 
+
 ### Stage 1.1 - Baremetal server configuration
 
 - Pull latest [tested-images](https://raspi.debian.net/tested-images/) from [raspi.debian.net](https://raspi.debian.net)
@@ -90,15 +96,15 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
   - `curl -sfL https://get.k3s.io | K3S_TOKEN=<redacted> sh -s - server --disable-etcd --write-kubeconfig-mode=644 --server https://hlc-402.marks.dev:6443`
   - The rest of the servers (301-308):
   - `curl -sfL https://get.k3s.io | K3S_TOKEN=<redacted> sh -s - agent --server https://hlc-401.marks.dev:6443`
-  - Labeling:
-    - `kubectl label node hlc-401.marks.dev node-role.kubernetes.io/nfs=true`
-    - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/agent=true; done`
-    - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/agent-; done`
-    - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/worker=true; done`
+- Labeling:
+  - `kubectl label node hlc-401.marks.dev node-role.kubernetes.io/nfs=true`
+  - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/agent=true; done`
+  - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/agent-; done`
+  - `for i in 301 302 303 304 305 306 307 308; do kubectl label node hlc-$i.marks.dev node-role.kubernetes.io/worker=true; done`
 
-### Stage 1.5 - Filling out core functionality
+## Stage 2 - Filling out core functionality
 
-- What's left:
+- What's left to do:
   - Still need to install `nfs-subdir-external-provisioner`
   - Need to determine where etcd is storing its crap and use a USB key to supplement storage
   - `/var/lib/rancher` seems to be the culprit...worth exploring a solution
@@ -107,3 +113,9 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
     - MetalLB is an option - [metallb.universe.tf](https://metallb.universe.tf/)
   - ArgoCD
   - All the rest thru Argo
+  - Prettify shell (motd and PS1)
+- New Years First Steps
+  - Break out old `hlc-salt-data` repo to get old motd configuration
+  - Update ansible playbooks to include motd configuration
+  - Verify all logins look prettified for now
+  - Format partitions and mount to /var/lib/rancher/k3s, migrating data and etcd stuff
