@@ -28,7 +28,11 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
   - Get a 12-node Kubernetes cluster online in 2023.
   - Abandon Ubuntu configurations for Debian 12 base OS
   - Deploy the cluster via k3s, standard k8s binaries, or alternate method
-  - 
+  - Deploy ArgoCD and set up basic cluster services
+  - Provide storage, ingress, and load balancer services
+  - Enable Prometheus logging and monitoring with Graphana dashboards
+  - Deploy first network services: DNS and hosting `marks.dev`
+  - Automate along the way as much as possible
 
 ### Stage 1.1 - Baremetal server configuration
 
@@ -114,8 +118,43 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
   - ArgoCD
   - All the rest thru Argo
   - Prettify shell (motd and PS1)
+
+### Stage 2.1 - Storage
+
 - New Years First Steps
   - Break out old `hlc-salt-data` repo to get old motd configuration
   - Update ansible playbooks to include motd configuration
   - Verify all logins look prettified for now
   - Format partitions and mount to /var/lib/rancher/k3s, migrating data and etcd stuff
+- NFS Setup
+  - https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner#with-helm
+  - `helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/`
+  - `helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner --set nfs.server=hlc-401.marks.dev --set nfs.path=/data`
+  - test: `kubectl create -f https://raw.githubusercontent.com/kubernetes-sigs/nfs-subdir-external-provisioner/master/deploy/test-claim.yaml -f https://raw.githubusercontent.com/kubernetes-sigs/nfs-subdir-external-provisioner/master/deploy/test-pod.yaml`
+  - results:
+
+    ```bash
+    bob@hlc-401:/$ cd /data                                                                            
+    bob@hlc-401:/data$ ls                                                                              
+    hlc  kube-system-test-claim-pvc-ded87e89-d0f8-45ac-84b4-2a61cf741f15  lost+found  test
+    bob@hlc-401:/data$ cd kube-system-test-claim-pvc-ded87e89-d0f8-45ac-84b4-2a61cf741f15/             
+    bob@hlc-401:/data/kube-system-test-claim-pvc-ded87e89-d0f8-45ac-84b4-2a61cf741f15$ ls              
+    SUCCESS
+    ```
+
+### Stage 2.2 - Getting ArgoCD Online
+
+- ArgoCD setup:
+  - `kubectl create namespace argocd``
+  - `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/core-install.yaml`
+  - Tried `kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'`
+  - Failed because Traefik is already binding to all `80` and `443` ports for all server nodes
+  - Need to do this thru Traefik
+- Traefik setup:
+  - Built in to k3s, works similarly to `ingress-nginx`
+  - Reading up on usage, handles TLS termination!
+  - Cannot reach the portal at all due to missing certs
+  - Can't go without `cert-manager` because HTTPS is required for `.dev` TLDs
+- Cert-Manager setup:
+  - helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.13.3 --set installCRDs=true
+  - Didn't work as intended due to DNS01 being required for an HSTS domain to validate certs
