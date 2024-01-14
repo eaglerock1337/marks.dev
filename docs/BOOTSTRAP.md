@@ -158,3 +158,7 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
 - Cert-Manager setup:
   - helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.13.3 --set installCRDs=true
   - Didn't work as intended due to DNS01 being required for an HSTS domain to validate certs
+- GoDaddy DNS01 webhook
+  - `git clone git@github.com:snowdrop/godaddy-webhook.git`
+  - `cd godaddy-webhook`
+  - `helm install -n cert-manager godaddy-webhook ./deploy/charts/godaddy-webhook`

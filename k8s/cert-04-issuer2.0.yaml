@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: godaddy-api-key
+type: Opaque
+stringData:
+  token: 3AiPWCRgvh_8cF8uWqwuMQHaY2n2BeXBQ:8DgkAzWeQLEHLG1WtFvpqU
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    email: peter.marks@gmail.com
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+    - selector:
+        dnsNames:
+        - '*.marks.dev'
+      dns01:
+        webhook:
+          config:
+            apiKeySecretRef:
+              name: godaddy-api-key
+              key: token
+            production: true
+            ttl: 600
+          groupName: acme.marks.dev
+          solverName: godaddy
