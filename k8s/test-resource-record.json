@@ -1,0 +1,18 @@
+{
+  "Comment": "Add test TXT record via CLI",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name" : "example.marks.dev.",
+        "Type" : "TXT",
+        "TTL" : 900,
+        "ResourceRecords" : [ 
+          {
+            "Value": "\"Babbitaboopi\""
+          }
+	]
+      }
+    }
+  ]
+}

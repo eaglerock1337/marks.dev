@@ -1,0 +1,26 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    email: peter.marks@gmail.com
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+    - selector:
+        dnsZones:
+        - "marks.dev"
+      dns01:
+        route53:
+          region: us-east-1
+          hostedZoneID: Z0801011JLVGM02KBXSX
+          accessKeyID: AKIATE2TXX4KEPFXR47W
+          # Doesn't work as advertised
+          # accessKeyIDSecretRef:
+          #   name: route53-credentials-secret
+          #   key: access-key-id
+          secretAccessKeySecretRef:
+            name: route53-credentials-secret
+            key: secret-access-key

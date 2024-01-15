@@ -117,6 +117,7 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
     - MetalLB is an option - [metallb.universe.tf](https://metallb.universe.tf/)
   - ArgoCD
   - All the rest thru Argo
+  - Super-basic site for `hlc.marks.dev` to prove functionality
   - Prettify shell (motd and PS1)
 
 ### Stage 2.1 - Storage
@@ -145,7 +146,7 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
 ### Stage 2.2 - Getting ArgoCD Online
 
 - ArgoCD setup:
-  - `kubectl create namespace argocd``
+  - `kubectl create namespace argocd`
   - `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/core-install.yaml`
   - Tried `kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'`
   - Failed because Traefik is already binding to all `80` and `443` ports for all server nodes
@@ -162,3 +163,17 @@ The following is a record of the deployment of Happy Little Cloud, my Raspberry-
   - `git clone git@github.com:snowdrop/godaddy-webhook.git`
   - `cd godaddy-webhook`
   - `helm install -n cert-manager godaddy-webhook ./deploy/charts/godaddy-webhook`
+  - Couldn't get it to work no matter what I tried
+  - Attempting to migrate public DNS to AWS
+  - Uninstalled the godaddy-webhook Helm chart
+- AWS Route53 DNS01 setup
+  - [Instructions](https://deploy-preview-435--cert-manager.netlify.app/v0.14-docs/configuration/acme/dns01/route53/)
+  - Set up IAM role and credentials
+  - Cert-manager configuration failed again
+  - Credentials tested correctly on the CLI
+  - `AWS_ACCESS_KEY_ID=<redacted> AWS_SECRET_ACCESS_KEY=<redacted> aws route53 change-resource-record-sets --hosted-zone-id Z0801011JLVGM02KBXSX --change-batch file://test-resource-record.json`
+  - Proved the credentials work, but cert-manager still is not
+  - Further tweaking found that using `accessKeyIDSecretRef` does not work
+  - Attempted using `accessKeyID` with plaintext string, and that worked!
+  - Both a wildcard cert for `*.marks.dev` and `whoami.marks.dev` were validated successfully
+  - We are finally ready to start working on Argo!
