@@ -18,10 +18,6 @@ docsify serve
 
 This allows local preview and live editing of the site.
 
-## more documentation
-
-- [Bootstrapping hlc.marks.dev](docs/BOOTSTRAP.md)
-
 ## credits
 
 - Documentation-as-code courtesy of [Docsify](https://docsify.js.org).
