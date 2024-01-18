@@ -14,6 +14,6 @@ build: ## build the bot's Docker image
 
 .PHONY: push
 push: ## push the version to Docker hub
-	docker image tag eaglerock/mr-poopybutthole:${VERSION} eaglerock/mr-poopybutthole:latest
-	docker image push eaglerock/mr-poopybutthole:${VERSION}
-	docker image push eaglerock/mr-poopybutthole:latest
+	docker image tag eaglerock/marks.dev:${VERSION} eaglerock/marks.dev:latest
+	docker image push eaglerock/marks.dev:${VERSION}
+	docker image push eaglerock/marks.dev:latest
