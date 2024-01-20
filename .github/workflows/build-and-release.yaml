@@ -45,7 +45,7 @@ jobs:
       - name: Check old sha hash
         run: echo ${{ steps.old_sha.outputs.sha_short }}
       - name: Debug current directory
-      	run: ls -l
+        run: ls -l
       - name: Move to marks.dev chart directory
         run: cd happy-little-cloud/marks.dev
       - name: Swap Git Tag in Chart.yaml
