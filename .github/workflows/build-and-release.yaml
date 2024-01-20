@@ -45,7 +45,7 @@ jobs:
       - name: Check old sha hash
         run: echo ${{ steps.old_sha.outputs.sha_short }}
       - name: Set Git Name
-      	run: git config --global user.name "Autobob"
+        run: git config --global user.name "Autobob"
       - name: Set Git Email
       	run: git config --global user.email "bob@marks.dev"
       - name: Swap Git Tag in Chart.yaml
