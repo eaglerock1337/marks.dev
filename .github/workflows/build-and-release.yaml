@@ -30,13 +30,11 @@ jobs:
 
   Publish-HLC-Site:
     runs-on: ubuntu-latest
-    env:
-      RELEASE_REPO: eaglerock1337/happy-little-cloud
     steps:
-      - name: Check out repository code
+      - name: Check out HLC repo code
         uses: actions/checkout@v4
         with:
-          repository: "$RELEASE_REPO"
+          repository: eaglerock1337/happy-little-cloud
           token: ${{ secrets.HLC_GITHUB_TOKEN }}
       - name: Get Old Version from Chart yaml
         id: old_sha
