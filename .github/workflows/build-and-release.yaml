@@ -33,6 +33,8 @@ jobs:
     env:
       RELEASE_REPO: eaglerock1337/happy-little-cloud
     steps:
+      - name: Test
+        run: echo $RELEASE_REPO
       - name: Check out repository code
         uses: actions/checkout@v4
         with:
