@@ -28,13 +28,15 @@ jobs:
             eaglerock/marks.dev:latest
             eaglerock/marks.dev:${{ steps.new_sha.outputs.sha_short }}
 
-  Publish-Site:
+  Publish-HLC-Site:
     runs-on: ubuntu-latest
+    env:
+      RELEASE_REPO: git@github.com:eaglerock1337/happy-little-cloud.git
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
         with:
-          repository: ${{ variables.RELEASE_REPO }}
+          repository: $RELEASE_REPO
           token: ${{ secrets.HLC_GITHUB_TOKEN }}
       - name: Get Old Version from Chart yaml
         id: old_sha
