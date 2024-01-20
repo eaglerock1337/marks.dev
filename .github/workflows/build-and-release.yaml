@@ -33,12 +33,10 @@ jobs:
     env:
       RELEASE_REPO: eaglerock1337/happy-little-cloud
     steps:
-      - name: Test
-        run: echo $RELEASE_REPO
       - name: Check out repository code
         uses: actions/checkout@v4
         with:
-          repository: $RELEASE_REPO
+          repository: "$RELEASE_REPO"
           token: ${{ secrets.HLC_GITHUB_TOKEN }}
       - name: Get Old Version from Chart yaml
         id: old_sha
