@@ -32,6 +32,7 @@ jobs:
 
   Publish-HLC-Site:
     runs-on: ubuntu-latest
+    needs: Build-Site-Image
     steps:
       - name: Check out HLC repo code
         uses: actions/checkout@v4
@@ -44,6 +45,6 @@ jobs:
       - name: Check old sha hash
         run: echo ${{ steps.old_sha.outputs.sha_short }}
       - name: Swap Git Tag in Chart.yaml
-        run: sed -i /appVersion/s/${{ steps.old_sha.output.sha_short }}/${{ jobs.Build-Site-Image.outputs.new_sha }}/ Chart.yaml
+        run: sed -i /appVersion/s/${{ steps.old_sha.output.sha_short }}/${{ needs.Build-Site-Image.outputs.new_sha }}/ Chart.yaml
       - name: Commit New Version to GitHub
-        run: git commit -am "Update marks.dev site to use ${{ steps.new_sha.output.sha_short }} tag" && git push
+        run: git commit -am "Update marks.dev site to use ${{ needs.Build-Site-Image.outputs.new_sha }} tag" && git push
