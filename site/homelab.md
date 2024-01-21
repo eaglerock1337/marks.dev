@@ -1,8 +1,11 @@
-# projects
+# homelab
 
-Here's some stuff I'm working on that you might be interested in
 
-## homelab
+
+
+
+
+## rack & network
 
 In the process of doing some home renovations, I finally was able to wire my house with Ethernet, meaning I can finally build homelab complete with a proper wallmount rack and professional-grade equipment. I'm hoping to have a lot to say about this in the future, but the project is on-hold for now. Here's my outline for the project, however:
 
@@ -22,22 +25,15 @@ The goal is to set up the network and the RPi cluster first, followed by the fir
 
 I have a [PCPartPicker](https://pcpartpicker.com/user/EagleRock/saved/#view=Csv4pg) for those like-minded individual who appreciate all the details :smile:
 
-## incremental game
 
-I'm also working on an [incremental game](https://en.wikipedia.org/wiki/Incremental_game) in my spare time, which is a good excuse for me to learn some front-end development, including working with [svelte](https://svelte.dev/) and TypeScript (okay, I'm not using TypeScript yet, but at least I'm using JSDoc).
 
-Here's some features the game will have:
 
-- open-source and free to play (no freemium or pay-to-win :poop:)
-- web-based game with mobile and desktop gameplay
-- all the usual incremental game numbers-go-up endorphin goodness
-- training for adventuring, gaining exp, leveling up, improving stats
-- active and idle gameplay
-- a prestige system for gaining adventure points (AP) upon game restart
-- short adventuring to gain exp and AP
-- questing for unlocking game content (and all other stuff you'll have to find out later)
 
-The game isn't complete enough for even a demo, but I'll post a link once I have something playable. In the meantime, here's the [GitHub page](https://github.com/eaglerock1337/tomeclicker) if you want to read more about the project!
+## happy little cloud
+
+<!-- markdownlint-disable MD033 -->
+*Let's build just a happy little cloud."* <sub>~ Bob Ross</sub>
+
 
 ## more code
 

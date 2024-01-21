@@ -21,12 +21,14 @@ I'm a Site Reliability Engineer in New Jersey. I've been running production Linu
 - DevOps principles
 - Production readiness
 - Everything as code
+- Blameless retrospectives
 - Documentation is key
 - Automate all the things
 
 ## **hobbies**
 
-- :video_game:  simracing
+- :video_game: retro video games
+- :racing_car: simracing
 - :floppy_disk: vintage computers
 - :trollface: writing programs to troll my friends
 

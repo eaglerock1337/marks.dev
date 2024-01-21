@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-next-line first-line-heading -->
 - [home](/)
-- [projects](projects)
+- [homelab](homelab)
 - [code](code)
 - **Links**
   - [GitHub](https://github.com/eaglerock1337/)
