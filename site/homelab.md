@@ -1,6 +1,6 @@
 # homelab
 
-
+![A picture of my homelab in New Jersey.](./_media/homelab.jpg "A picture of my homelab in New Jersey.")
 
 
 
