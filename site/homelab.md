@@ -26,9 +26,8 @@ The specs have been tweaked throughout the process (especially the network hardw
 
 <div style="text-align: center;">
 
-![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=45%")<br>*Delorean today, running 15 years and counting.*
+![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=45%")<br>`delorean` *still running today, 15 years and counting.*
 </div>
-
 
 Prior to the project, I had the following servers at home:
 
@@ -37,29 +36,26 @@ Prior to the project, I had the following servers at home:
 - `stapler` - my Plex server formerly serving double-duty as a living-room set-top PC
 - `pihole` - a Raspberry Pi 4 working as my internal DNS and DNS sinkhole adblocker
 
-My motivation for this project can be boiled down to two things:
+The gist of the migration is to migrate services before these servers meet the great daemon in the sky.
 
-1. replace the above servers before they meet the great daemon in the sky
-2. lock down the ever-increasing number of insecure smart devices in my home
-
-## the goals
+## the plan
 
 <div style="text-align: center;">
 
-![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "A picture of my homelab in New Jersey.")*The server rack today, its UPS, and* `stapler`.
+![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "I believe I have my stapler.")*The server rack today, its UPS,* `stapler`, *and* the *red stapler.*
 </div>
 
-As such, my migration goals became the following:
+As such, my migration plan became the following:
 
 - install a proper rack for all my servers
 - remove single points of failure where possible
 - upgrade my home network hardware
 - build out multiple virtual networks (VLANs)
-- isolate my growing list of IoT (Internet-of-Things) devices
-- deploy Happy Little Cloud mk2, a 12-node Raspberry Pi Kubernetes Cluster
-- deploy basic network services to HLC mk2
+- lock down all IoT (Internet-of-Things) devices
+- revive my Happy Little Cloud k8s cluster
+- deploy basic websites and services
 - prove out my home tech stack
-- deploy first node of Ecto-1, a 4-node Ryzen-based Kubernetes cluster
+- deploy first node of Ecto-1 k8s cluster
 - migrate remaining services to Ecto-1
 - repurpose `stapler` as spare gaming PC
 - decomission `delorean`, `yanosh`
