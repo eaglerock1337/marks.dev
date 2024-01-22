@@ -53,7 +53,7 @@ As such, my migration goals became the following:
 - deploy first node of Ecto-1, a 4-node Ryzen-based Kubernetes cluster
 - migrate remaining heavy load services, such as fileservers and Plex
 - decomission `delorean`, `yanosh`, and `stapler`
-- ???
+- [???](https://www.youtube.com/watch?v=a5ih_TQWqCA)
 - profit!
 
 <div style="text-align: center;">
