@@ -1,7 +1,10 @@
 # code
 
 <!-- markdownlint-disable MD001 MD033 -->
-### <sub>*shippin' it*</sub> :shipit: {docsify-ignore}
+### <sub>*shippin' it*</sub> :shipit:<br><br>{docsify-ignore}
+
+>[!NOTE]
+>I have plenty of half-finished coding projects I intend to finish, but I've been using my spare time to complete the homelab. I hope to have more to share here soon!
 
 ## tomeclicker
 
@@ -18,7 +21,7 @@ Here's some features the game will have:
 - short adventuring to gain exp and AP
 - questing for unlocking game content (and all other stuff you'll have to find out later)
 
-The game isn't complete enough for even a demo, but I'll post a link once I have something playable. In the meantime, here's the [GitHub page](https://github.com/eaglerock1337/tomeclicker) if you want to read more about the project!
+The game isn't complete enough for even a demo, but I'll post a link once I have something playable. In the meantime, here's the [GitHub page](https://github.com/eaglerock1337/tomeclicker) if you want to read more.
 
 ## more code
 

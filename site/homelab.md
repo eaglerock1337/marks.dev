@@ -20,59 +20,54 @@ I'm very much a fan of building things in a compact and efficient manner, especi
 - [4-node Ryzen 7 based Kubernetes Cluster](https://pcpartpicker.com/user/EagleRock/saved/#view=Csv4pg)
 - [APC Back-UPS Pro 1500VA Uninterruptable Power Supply](https://www.apc.com/us/en/product/BN1500M2/apc-backups-pro-1500va-tower-120v-10-nema-515r-outlets-lcd-1-usb-type-c-+-1-usb-type-a-ports/)
 
-The specs have been tweaked over time
+The specs have been tweaked throughout the process (especially the network hardware), and the hardware list needs to be refreshed for 2024, but the plan essentially remains the same.
 
-## rack & network
-
-![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "A picture of my homelab in New Jersey.")
-
-
-
-The goal is to set up the network and the RPi cluster first, followed by the first of the four Ryzen 7 nodes. Each of the 4 nodes will have the following:
-
-- 1U short-depth server case with HDD hot-swap module
-- Ryzen 7 5700G 3.8GHz 8-core CPU
-- 64GB DDR4-3600 RAM
-- 2x TB Samsung 970 Evo Plus m.2 SSD
-- 4x Seagate 5TB 2.5" 5400RPM HDD
-
-I have a [PCPartPicker](https://pcpartpicker.com/user/EagleRock/saved/#view=Csv4pg) for those like-minded individual who appreciate all the details :smile:
-
-## happy little cloud
+## the migration
 
 <div style="text-align: center;">
 
-!["Let's build just a happy little cloud."](./_media/bob-ross.gif "Let's build just a happy little cloud.")
-
-*I quite literally took his advice.*
+![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "A picture of my homelab in New Jersey.")*The server rack today, along with its UPS and Stapler, one of my older servers.*
 </div>
 
-When I first started learning about Kubernetes, it was immediately fascinating to me, as it made sense to me. Even when I was young and was learning how clusters and supercomputers worked, I had an idea of how it would work, and Kubernetes just fits it. As a professional who has been working on production Linux systems for over a decade, Kubernetes was the answered prayers of system administrators worldwide. I knew I wanted to build a cluster, and Kubernetes was the way.
+Prior to the project, I had the following servers at home:
 
-In terms of hardware, the rise of the Raspberry Pi as an inexpensive Linux system made building a computer cluster a realistic option. Plenty of other SREs and other DevOps-y individuals were already building similar clusters, so I wanted to give mine a shot.
+- `delorean` - my oldest server, still running my fileserver, reverse proxy, and some webservers
+- `yanosh` - an old gaming computer turned KVM hypervisor, shut down due to system failures
+- `stapler` - my Plex server formerly serving double-duty as a living-room set-top PC
+- `pihole` - a Raspberry Pi 4 working as my internal DNS and DNS sinkhole adblocker
 
-### hlc mark 1
+My motivation for this project can be boiled down to two things:
+
+1. replace the above servers before they meet the great daemon in the sky
+2. lock down the ever-increasing number of insecure smart devices in my home
+
+As such, my migration goals became the following:
+
+- install a proper server rack for all my server hardware
+- remove as many single points of failure as possible
+- upgrade my home network and create VLANs for network segregation
+- get my growing list of IoT (Internet-of-Things) devices on an isolated VLAN
+- deploy Happy Little Cloud mk2, a 12-node Raspberry Pi Kubernetes Cluster
+- migrate essential & basic services (webservers, DNS, etc.) to HLC mk2
+- prove out my home tech stack with the Raspberry Pis before upgrading servers
+- deploy first node of Ecto-1, a 4-node Ryzen-based Kubernetes cluster
+- migrate remaining heavy load services, such as fileservers and Plex
+- decomission `delorean`, `yanosh`, and `stapler`
+- ???
+- profit!
 
 <div style="text-align: center;">
 
-!["The first version of the Happy Little Cloud."](./_media/hlc-mk1.jpg "The first version of the Happy Little Cloud.")
-
-*The original version of Happy Little Cloud performing brilliantly as a cat butt warmer.*
+![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=45%")<br>*Delorean today, running 16 years and counting.*
 </div>
 
-The first version of the Happy Little Cloud took advantage of a 6 Raspberry Pi cluster chassis, a miniature 8-port switch, 8-port USB hub, and mini WiFi router running OpenWRT. I based the cluster on Ubuntu 18.10, Microk8s, and Kubernetes 1.12. I was happy with how it turned out physically, and I was able to get the cluster running with a basic demo.
+Delorean has served me well for many years and has had all of its RAM and hard disks replaced at least once at this point. I'm just hoping it'll hold out until I'm ready to buy the replacement hardware. :crossed_fingers:
 
-My first demo app on the cluster was [hlc-blinky](https://gitlab.com/eaglerock-hlc/hlc-blinky), which blinked the Raspberry Pi's power and activity LEDs to demonstrate the cluster's ability to manage and scale applications. However, I didn't get much more accomplished than this because I was unable to set up storage on the cluster.
+Honorable mention to Yanosh still hanging in there as Delorean's official keyboard stand! :1st_place_medal:
 
-As it turns out, Kubernetes was still fairly young in development and as a cloud-native application, it was not well-suited to running on baremetal hardware at the time. The few available built-in storage providers didn't provide a good option, and while I had the idea to attempt GlusterFS as a solution, I was never able to get it working.
+## network
 
-### hlc mark 2
+> [!NOTE]
+> I'm still in the process of finishing the network configuration and will write this out when done!
 
-<div style="text-align: center;">
-
-!["Happy Little Cloud Mark 2."](./_media/hlc-mk2.jpg "Happy Little Cloud Mark 2.")
-
-*Happy Little Cloud today, made up of 4 RPi 4's and 8 RPi 3's.*
-</div>
-
-When I decided to start working on the homelab, I wanted to cram as many Raspberry Pis as I could fit. The 12-node, 2U rack enclosure was perfect. I had the eight Pi 3's already and one RPi 4, but needed some time to fill out the rest of the cluster, thanks to the semiconductor supply chain crisis. By the time the Ubiquiti hardware was available at my local Microcenter, so was the Raspberry Pi 4's I needed.
+I'll write up some more details on how I built out the network later. In the meantime, check out how I started building the [happy little cloud](hlc)!

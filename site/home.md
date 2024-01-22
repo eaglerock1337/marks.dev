@@ -10,10 +10,10 @@ I'm a Site Reliability Engineer in New Jersey. I've been running production Linu
 ## **skills**
 
 - **Programming** - Python, Bash, Go, JavaScript, Ruby, C/C++
-- **Linux** - Distro-agnostic, but I favor Debian & Ubuntu
+- **Linux** - Distro-agnostic, but Debian's my favorite
 - **Containers** - Docker, Kubernetes, Helm, and Docker Compose
 - **Infra-as-code** - Ansible, Terraform, Chef, Docsify
-- **Automation** - Azure Pipelines, Jenkins, GitHub Actions, ArgoCD
+- **Automation** - ArgoCD, GitHub Actions, Azure Pipelines, Jenkins
 - **DevOps** - DataDog, Splunk, Firehydrant, Backstage, PagerDuty
 
 ## **philosophies**
@@ -36,4 +36,4 @@ I'm a Site Reliability Engineer in New Jersey. I've been running production Linu
 
 ## more stuff
 
-Take a look at some of the [projects](projects) I'm working on, some random [code](code) snippets I wrote, or check out my [GitHub](https://github.com/eaglerock1337/) page for more!
+I'm currently working on my [homelab](homelab), where I'm working on redoing my home network and deploying two Kubernetes clusters, [Happy Little Cloud](hlc) and [Ecto-1](ecto-1). You can also check out some [coding projects](code) I'm planning or check out my [GitHub](https://github.com/eaglerock1337/) page for more!
