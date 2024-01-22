@@ -24,7 +24,7 @@ When he mentioned "[building a happy little cloud](https://www.youtube.com/watch
 
 <div style="text-align: center;">
 
-!["The Happy Little Cloud mk1 with my cat sitting next to it."](./_media/hlc-mk1.jpg "HLC mk1, the first version of the Happy Little Cloud.")*The original version of Happy Little Cloud performing brilliantly as a cat butt warmer.*
+!["The Happy Little Cloud Mark 1 with my cat sitting next to it."](./_media/hlc-mk1.jpg "Happy Little Cloud is SRE tested, cat approved.")*The original version of Happy Little Cloud performing brilliantly as a cat butt warmer.*
 </div>
 
 >[!WARNING]
@@ -42,7 +42,7 @@ I must, however credit the original Happy Little Cloud for its dutiful services 
 
 <div style="text-align: center;">
 
-!["Happy Little Cloud Mark 2."](./_media/hlc-mk2.jpg "Happy Little Cloud Mark 2.")*Happy Little Cloud today in it's happy little rack.*
+!["Happy Little Cloud Mark 2 in its server rack."](./_media/hlc-mk2.jpg "Happy Little Cloud Mark 2.")*Happy Little Cloud today in it's happy little rack.*
 </div>
 
 When I decided to start working on the homelab, I wanted to cram as many Raspberry Pis as I could fit. The [12-node, 2U rack enclosure](https://www.amazon.com/gp/product/B098924W9M/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) I found was perfect. I had the eight Pi 3's already and one RPi 4, but wasn't able to purchase the rest due to the global semiconductor supply-chain crisis at the time. I was also unable to find Ubiquiti devices in stock, so I had put the project aside for a while.
