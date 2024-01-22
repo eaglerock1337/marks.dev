@@ -20,7 +20,7 @@ I'm very much a fan of building things in a compact and efficient manner, especi
 - [4-node Ryzen 7 based Kubernetes Cluster](https://pcpartpicker.com/user/EagleRock/saved/#view=Csv4pg)
 - [APC Back-UPS Pro 1500VA Uninterruptable Power Supply](https://www.apc.com/us/en/product/BN1500M2/apc-backups-pro-1500va-tower-120v-10-nema-515r-outlets-lcd-1-usb-type-c-+-1-usb-type-a-ports/)
 
-
+The specs have been tweaked over time
 
 ## rack & network
 
@@ -64,7 +64,7 @@ The first version of the Happy Little Cloud took advantage of a 6 Raspberry Pi c
 
 My first demo app on the cluster was [hlc-blinky](https://gitlab.com/eaglerock-hlc/hlc-blinky), which blinked the Raspberry Pi's power and activity LEDs to demonstrate the cluster's ability to manage and scale applications. However, I didn't get much more accomplished than this because I was unable to set up storage on the cluster.
 
-As it turns out, Kubernetes was still fairly young in development and as a cloud-native application, it was not well-suited to running on baremetal hardware at the time. The few available built-in storage providers didn't provide a good option, and while I had the idea to attempt GlusterFS as a solution, I never get it working.
+As it turns out, Kubernetes was still fairly young in development and as a cloud-native application, it was not well-suited to running on baremetal hardware at the time. The few available built-in storage providers didn't provide a good option, and while I had the idea to attempt GlusterFS as a solution, I was never able to get it working.
 
 ### hlc mark 2
 
@@ -74,3 +74,5 @@ As it turns out, Kubernetes was still fairly young in development and as a cloud
 
 *Happy Little Cloud today, made up of 4 RPi 4's and 8 RPi 3's.*
 </div>
+
+When I decided to start working on the homelab, I wanted to cram as many Raspberry Pis as I could fit. The 12-node, 2U rack enclosure was perfect. I had the eight Pi 3's already and one RPi 4, but needed some time to fill out the rest of the cluster, thanks to the semiconductor supply chain crisis. By the time the Ubiquiti hardware was available at my local Microcenter, so was the Raspberry Pi 4's I needed.
