@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD033 -->
 <div style="text-align: center;">
 
-!["A picture of my homelab in the dark with fancy, blinky lights."](./_media/hlc.jpg "You gotta have the Hollywood shot.")
+!["A picture of my homelab in the dark with fancy, blinky lights."](./_media/hlc.jpg "Who doesn't love colorful, blinky lights?")*The obligatory Hollywood shot.*
 </div>
 
 I've been wanting to upgrade my homelab for a while. After getting my home wired with Ethernet during renovations, I had an opportunity to redo my entire home network from scratch, and wanted to build it out as professionally as I could. Most of my professional work has had to cut corners somewhere for practical business reasons, but I could do this without a timeline, other than replacing my current aging servers before they beep their last boop.
@@ -26,7 +26,7 @@ The specs have been tweaked throughout the process (especially the network hardw
 
 <div style="text-align: center;">
 
-![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "A picture of my homelab in New Jersey.")*The server rack today, along with its UPS and Stapler, one of my older servers.*
+![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "A picture of my homelab in New Jersey.")*The server rack today, its UPS, and* `stapler`.
 </div>
 
 Prior to the project, I had the following servers at home:

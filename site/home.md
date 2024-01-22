@@ -36,4 +36,4 @@ I'm a Site Reliability Engineer in New Jersey. I've been running production Linu
 
 ## more stuff
 
-I'm currently working on my [homelab](homelab), where I'm working on redoing my home network and deploying two Kubernetes clusters, [Happy Little Cloud](hlc) and [Ecto-1](ecto-1). You can also check out some [coding projects](code) I'm planning or check out my [GitHub](https://github.com/eaglerock1337/) page for more!
+I'm currently working on my [homelab](homelab), where I'm redoing my home network and building two Kubernetes clusters, [Happy Little Cloud](hlc) and [Ecto-1](ecto-1). You can also check out some [coding projects](code) I'm planning or check out my [GitHub](https://github.com/eaglerock1337/) page for more!

@@ -13,21 +13,21 @@ Once I get the [Happy Little Cloud](hlc) in good working order, my plan is to fi
 Here are the servers that I am planning to replace with the Ecto-1:
 
 - `delorean`
-  - my second-ever public server, the first one purpose-built
+  - my primary server for many years
   - started life as a Dell Inspiron 530 in 2008
-  - has a Q6600 Core 2 Quad CPU and 4GB of RAM
+  - Q6600 Core 2 Quad CPU with 4GB of RAM
   - previously hosted all of my services
   - hosted my public Minecraft server for years
   - still acting as a webserver and fileserver
 - `yanosh`
   - an old gaming machine repurposed as a server
-  - hand-built with a 1st-gen Intel Core i7-860 processor and 8GB of RAM
-  - acted as KVM hypervisor hosting multiple virtual machines
-  - formerly hosted my internal DNS server, multiple game servers
-  - system is no longer running as hardware is failing
+  - 1st-gen Intel Core i7-860 CPU with 8GB of RAM
+  - ran KVM running several virtual machines
+  - hosted a DNS server and multiple game servers
+  - system is offline as hardware is failing
 - `stapler`
   - a mini-itx PC in a small-form-factor case
-  - hand-built with a Ryzen 5 Q2400G APU and 16GB of RAM
+  - Ryzen 5 Q2400G APU with 16GB of RAM
   - formerly acted as my living room media server
   - currently acting as my Plex server
 - `pihole`
@@ -35,7 +35,7 @@ Here are the servers that I am planning to replace with the Ecto-1:
   - runs on a Raspberry Pi 4 4GB
   - acts as internal DNS for my network
 
-I would like to repurpose `stapler` as a lightweight gaming machine and finally retire `delorean` and `yanosh` for good.
+I would like to repurpose `stapler` as a small gaming machine and finally retire `delorean` and `yanosh`.
 
 ## the name
 
@@ -48,17 +48,14 @@ I would like to repurpose `stapler` as a lightweight gaming machine and finally 
 
 As you might have noticed, all of my servers are named after people or props from my favorite movies and shows. Here's my running list so far:
 
-- `delorean` - time machine from *Back to the Future*
-- `dodgson` - character from *Jurassic Park* and [YTMND star](https://dodgson.ytmnd.com/)
-- `yanosh` - named after Janosz Poha from *Ghostbusters 2*
+- `delorean` - the *Back to the Future* time machine
+- `dodgson` - *Jurassic Park* character and [YTMND star](https://dodgson.ytmnd.com/)
+- `yanosh` - *Ghostbusters 2* villain/comic relief
 - `stapler` - red stapler from *Office Space*
 - `gibson` - the mainframe computer from *Hackers*
-- `septim` - the currency in the *Elder Scrolls* series of games
 - `happy little cloud` - recurring character of *The Joy of Painting*
 
-I wanted to keep the tradition going, but didn't really have a good idea for a name. The name for the Happy Little Cloud fit just a bit too well and picking a good, meaningful group of four was tough.
-
-I eventually settled on `ecto-1`, as the iconic vehicle from Ghostbusters. The Ghostbusters themselves, `egon`, `peter`, `ray`, and `winston`, would be perfect names for the four nodes of the cluster.
+I wanted to keep the tradition going, and eventually settled on `ecto-1`, the iconic vehicle from Ghostbusters. The Ghostbusters themselves, `egon`, `peter`, `ray`, and `winston`, will be perfect names for the four nodes of the cluster.
 
 ## the plan
 
@@ -80,11 +77,11 @@ Since the 7000 series of Ryzen processors are out and prices and availability ha
 
  I plan to host the following services:
 
-- New `eagleworld.net` homepage & reverse proxy
+- New `eagleworld.net` homepage & proxy
 - Fileserver attached to HLC's NextCloud server
 - [Plex server](https://www.plex.tv/) stack - video and audio sharing
-- `old.eagleworld.net` - copy of my original [BlazeBlogger](http://blaze.blackened.cz/) website
-- `minecraft.eagleworld.net` - old minecraft blog
+- `old.eagleworld.net` - my old [BlazeBlogger](http://blaze.blackened.cz/) homepage
+- `minecraft.eagleworld.net` - my old Minecraft server blog
 
 I also hope to host several game servers as well:
 
@@ -92,7 +89,7 @@ I also hope to host several game servers as well:
 - [Skyrim Together](https://skyrim-together.com/) game server
 - [BeamMP](https://beammp.com/) game server
 - [Satisfactory](https://www.satisfactorygame.com/) game server
-- My old Minecraft game server
-- My old Tekkit game server
+- [My old Minecraft](http://minecraft.eagleworld.net/dynmap/aquilia/) game server
+- [My old Tekkit](http://minecraft.eagleworld.net/dynmap/technia/) game server
 
 As you can see, I have a lot in plan, stay tuned!
