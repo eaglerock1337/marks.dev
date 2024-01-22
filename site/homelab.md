@@ -26,7 +26,7 @@ The specs have been tweaked throughout the process (especially the network hardw
 
 <div style="text-align: center;">
 
-![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=60%")<br>`delorean` *still running today, 15 years and counting.*
+![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=60%")<br>`delorean` *still at it today, 15 years running.*
 </div>
 
 Prior to the project, I had the following servers at home:
@@ -42,7 +42,7 @@ The gist of the migration is to migrate services before these servers meet the g
 
 <div style="text-align: center;">
 
-![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "I believe I have my stapler.")*The server rack today, its UPS,* `stapler`, *and* the *red stapler.*
+![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "I believe I have my stapler.")*The homelab today, its UPS,* `stapler`, *and my stapler.*
 </div>
 
 As such, my migration plan became the following:
@@ -61,8 +61,6 @@ As such, my migration plan became the following:
 - decomission `delorean`, `yanosh`
 - [???](https://www.youtube.com/watch?v=a5ih_TQWqCA)
 - profit!
-
-
 
 Delorean has served me well for many years and has had all of its RAM and hard disks replaced at least once at this point. I'm just hoping it'll hold out until I'm ready to buy the replacement hardware. :crossed_fingers:
 

@@ -43,7 +43,7 @@ I would like to repurpose `stapler` as a small gaming machine and finally retire
 
 <div style="text-align: center;">
 
-!["A really creepy meme of Dr. Janosz Poha from Ghostbusters 2."](./_media/yanosh.jpg "Why am I drippings with goo? :size=90%")<br>*A prime example of a perfectly reasonable thing to name a server after.*
+!["A really creepy meme of Dr. Janosz Poha from Ghostbusters 2."](./_media/yanosh.jpg "Why am I drippings with goo? :size=90%")<br>*A sensible thing to name a server after.*
 </div>
 
 As you might have noticed, all of my servers are named after people or props from my favorite movies and shows. Here's my running list so far:
