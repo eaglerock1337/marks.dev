@@ -8,7 +8,7 @@
 
 I've been wanting to upgrade my homelab for a while. After getting my home wired with Ethernet during renovations, I had an opportunity to redo my entire home network from scratch, and wanted to build it out as professionally as I could. Most of my professional work has had to cut corners somewhere for practical business reasons, but I could do this without a timeline, other than replacing my current aging servers before they beep their last boop.
 
-## the plan
+## the idea
 
 I'm very much a fan of building things in a compact and efficient manner, especially since a full-length 42U server rack would be a logistical nightmare to fit in my basement. Instead, I wanted to go for something short-depth and possibly wall-mounted. After searching online for what was available and weighing the options, I settled on the following setup:
 
@@ -26,8 +26,9 @@ The specs have been tweaked throughout the process (especially the network hardw
 
 <div style="text-align: center;">
 
-![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "A picture of my homelab in New Jersey.")*The server rack today, its UPS, and* `stapler`.
+![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=45%")<br>*Delorean today, running 15 years and counting.*
 </div>
+
 
 Prior to the project, I had the following servers at home:
 
@@ -40,6 +41,13 @@ My motivation for this project can be boiled down to two things:
 
 1. replace the above servers before they meet the great daemon in the sky
 2. lock down the ever-increasing number of insecure smart devices in my home
+
+## the goals
+
+<div style="text-align: center;">
+
+![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "A picture of my homelab in New Jersey.")*The server rack today, its UPS, and* `stapler`.
+</div>
 
 As such, my migration goals became the following:
 
@@ -58,10 +66,7 @@ As such, my migration goals became the following:
 - [???](https://www.youtube.com/watch?v=a5ih_TQWqCA)
 - profit!
 
-<div style="text-align: center;">
 
-![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=45%")<br>*Delorean today, running 16 years and counting.*
-</div>
 
 Delorean has served me well for many years and has had all of its RAM and hard disks replaced at least once at this point. I'm just hoping it'll hold out until I'm ready to buy the replacement hardware. :crossed_fingers:
 
