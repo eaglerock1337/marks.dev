@@ -42,7 +42,7 @@ The gist of the migration is to migrate services before these servers meet the g
 
 <div style="text-align: center;">
 
-![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "I believe I have my stapler.")*The homelab today, its UPS,* `stapler`, *and my stapler.*
+![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "I believe I have my stapler.")*The homelab today,* `stapler`, *and my stapler.*
 </div>
 
 As such, my migration plan became the following:
