@@ -12,7 +12,7 @@ More to come later.
 
 ```bash
 npm i docsify-cli -g
-cd docsify
+cd site
 docsify serve
 ```
 

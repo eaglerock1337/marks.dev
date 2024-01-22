@@ -22,7 +22,7 @@ The game isn't complete enough for even a demo, but I'll post a link once I have
 
 ## more code
 
-Here's some random snippets for now until I get more coding projects going.
+I plan on showcasing more coding projects here, but for now, take a look at my [GitHub](https://github.com/eaglerock1337) page or check some random snippets below.
 
 > [!TIP]
 > Hold your phone sideways for this one.
