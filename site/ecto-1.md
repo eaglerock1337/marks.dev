@@ -21,7 +21,7 @@ Here are the servers that I am planning to replace with the Ecto-1:
   - still acting as a webserver and fileserver
 - `yanosh`
   - an old gaming machine repurposed as a server
-  - 1st-gen Intel Core i7-860 CPU with 8GB of RAM
+  - 1st-gen Core i7-860 CPU with 8GB of RAM
   - ran KVM running several virtual machines
   - hosted a DNS server and multiple game servers
   - system is offline as hardware is failing

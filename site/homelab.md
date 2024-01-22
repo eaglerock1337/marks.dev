@@ -43,16 +43,18 @@ My motivation for this project can be boiled down to two things:
 
 As such, my migration goals became the following:
 
-- install a proper server rack for all my server hardware
-- remove as many single points of failure as possible
-- upgrade my home network and create VLANs for network segregation
-- get my growing list of IoT (Internet-of-Things) devices on an isolated VLAN
+- install a proper rack for all my servers
+- remove single points of failure where possible
+- upgrade my home network hardware
+- build out multiple virtual networks (VLANs)
+- isolate my growing list of IoT (Internet-of-Things) devices
 - deploy Happy Little Cloud mk2, a 12-node Raspberry Pi Kubernetes Cluster
-- migrate essential & basic services (webservers, DNS, etc.) to HLC mk2
-- prove out my home tech stack with the Raspberry Pis before upgrading servers
+- deploy basic network services to HLC mk2
+- prove out my home tech stack
 - deploy first node of Ecto-1, a 4-node Ryzen-based Kubernetes cluster
-- migrate remaining heavy load services, such as fileservers and Plex
-- decomission `delorean`, `yanosh`, and `stapler`
+- migrate remaining services to Ecto-1
+- repurpose `stapler` as spare gaming PC
+- decomission `delorean`, `yanosh`
 - [???](https://www.youtube.com/watch?v=a5ih_TQWqCA)
 - profit!
 
