@@ -81,9 +81,9 @@ Since the 7000 series of Ryzen processors are out and prices and availability ha
  I plan to host the following services:
 
 - New `eagleworld.net` homepage & reverse proxy
-- Fileserver attached to NextCloud
-- Plex server stack - video and audio sharing
-- `old.eagleworld.net` - copy of my original website
+- Fileserver attached to HLC's NextCloud server
+- [Plex server](https://www.plex.tv/) stack - video and audio sharing
+- `old.eagleworld.net` - copy of my original [BlazeBlogger](http://blaze.blackened.cz/) website
 - `minecraft.eagleworld.net` - old minecraft blog
 
 I also hope to host several game servers as well:
@@ -92,5 +92,7 @@ I also hope to host several game servers as well:
 - [Skyrim Together](https://skyrim-together.com/) game server
 - [BeamMP](https://beammp.com/) game server
 - [Satisfactory](https://www.satisfactorygame.com/) game server
+- My old Minecraft game server
+- My old Tekkit game server
 
 As you can see, I have a lot in plan, stay tuned!
