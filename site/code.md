@@ -1,7 +1,31 @@
 # code
 
 <!-- markdownlint-disable MD001 MD033 -->
-### <sub>*shippin' it*</sub> :shipit: {docsify-ignore}<p></p>
+### <sub>*shippin' it*</sub> :shipit:<br><br>{docsify-ignore}
+
+>[!NOTE]
+>I have plenty of half-finished coding projects I intend to finish, but I've been using my spare time to complete the homelab. I hope to have more to share here soon!
+
+## tomeclicker
+
+I started working on an [incremental game](https://en.wikipedia.org/wiki/Incremental_game) in my spare time as a good excuse for me to learn some front-end development, including working with [svelte](https://svelte.dev/). I haven't done much work on this lately in favor of working on the homelab, but want to pick this back up once my hardware is more settled.
+
+Here's some features the game will have:
+
+- open-source and free to play (no freemium or pay-to-win :poop:)
+- web-based game with mobile and desktop gameplay
+- all the usual incremental game numbers-go-up endorphin goodness
+- training for adventuring, gaining exp, leveling up, improving stats
+- active and idle gameplay
+- a prestige system for gaining adventure points (AP) upon game restart
+- short adventuring to gain exp and AP
+- questing for unlocking game content (and all other stuff you'll have to find out later)
+
+The game isn't complete enough for even a demo, but I'll post a link once I have something playable. In the meantime, here's the [GitHub page](https://github.com/eaglerock1337/tomeclicker) if you want to read more.
+
+## more code
+
+I plan on showcasing more coding projects here, but for now, take a look at my [GitHub](https://github.com/eaglerock1337) page or check some random snippets below.
 
 > [!TIP]
 > Hold your phone sideways for this one.
