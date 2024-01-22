@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD033 -->
 <div style="text-align: center;">
 
-!["A picture of my homelab in the dark with fancy, blinky lights."](./_media/hlc.jpg "Who doesn't love colorful, blinky lights?")*The obligatory Hollywood shot.*
+!["A picture of my homelab in the dark with fancy, blinky lights."](./_media/hlc.jpg "Who doesn't love colorful, blinky lights?")*The obligatory Hollywood Shot* <sup>:tm:</sup>.
 </div>
 
 I've been wanting to upgrade my homelab for a while. After getting my home wired with Ethernet during renovations, I had an opportunity to redo my entire home network from scratch, and wanted to build it out as professionally as I could. Most of my professional work has had to cut corners somewhere for practical business reasons, but I could do this without a timeline, other than replacing my current aging servers before they beep their last boop.
