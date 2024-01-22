@@ -26,7 +26,7 @@ The specs have been tweaked throughout the process (especially the network hardw
 
 <div style="text-align: center;">
 
-![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=45%")<br>`delorean` *still running today, 15 years and counting.*
+![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=60%")<br>`delorean` *still running today, 15 years and counting.*
 </div>
 
 Prior to the project, I had the following servers at home:
