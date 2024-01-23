@@ -133,4 +133,4 @@ As far as Happy Little Cloud, here are some plans for mk3 so far:
 - upgrade to Raspberry Pi 5's once available
 - replace all Raspberry Pi 3's with newer models
 - replace SSD with fast USB drives and clustered storage
-- deploy webgames such as [tomeclicker](code/?id=tomeclicker)
+- deploy webgames such as [tomeclicker](code/#tomeclicker)
