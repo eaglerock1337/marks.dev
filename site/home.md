@@ -28,7 +28,7 @@ I'm a Site Reliability Engineer in New Jersey. I've been running production Linu
 ## **hobbies**
 
 - :video_game: retro video games
-- :racing_car: simracing
+- :car: simracing
 - :floppy_disk: vintage computers
 - :trollface: writing programs to troll my friends
 

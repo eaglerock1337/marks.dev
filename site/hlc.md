@@ -34,7 +34,7 @@ The first version of the Happy Little Cloud took advantage of a Raspberry Pi 6-n
 
 I was able to get a basic demo app on the cluster called [hlc-blinky](https://gitlab.com/eaglerock-hlc/hlc-blinky), which blinked the Raspberry Pi's power and activity LEDs to demonstrate the cluster's ability to manage and scale applications. However, I didn't get much more accomplished than this because I was unable to set up storage on the cluster.
 
-As it turns out, Kubernetes was still fairly young in development and as a cloud-native application, it was not well-suited to running on baremetal hardware at the time. The few available built-in storage providers were cloud-specific, and while I had the idea to attempt GlusterFS as a solution, I was never able to get it working.
+As it turns out, Kubernetes was still fairly young in development and as a cloud-native application, it was not well-suited to running on baremetal hardware at the time. The few available built-in storage providers were cloud-specific, and while I had the idea to attempt [GlusterFS](https://www.gluster.org/) as a solution, I was never able to get it working.
 
 I must, however credit the original Happy Little Cloud for its dutiful services as light blinker and cat butt warmer.
 
@@ -59,14 +59,14 @@ The twelve Raspberry Pis are clustered as follows:
 | `hlc-402` | RPi 4 | 4GB | `control` | `etcd` |
 | `hlc-403` | RPi 4 | 4GB | `control` | `etcd` |
 | `hlc-404` | RPi 4 | 4GB | `control` | `etcd` |
-| `hlc-301` | RPi 3B+ | 1GB | `worker` ||
-| `hlc-302` | RPi 3B+ | 1GB | `worker` ||
-| `hlc-303` | RPi 3B+ | 1GB | `worker` ||
-| `hlc-304` | RPi 3B+ | 1GB | `worker` ||
-| `hlc-305` | RPi 3B+ | 1GB | `worker` ||
-| `hlc-306` | RPi 3B+ | 1GB | `worker` ||
-| `hlc-307` | RPi 3B+ | 1GB | `worker` ||
-| `hlc-308` | RPi 3B+ | 1GB | `worker` ||
+| `hlc-301` | RPi 3 | 1GB | `worker` ||
+| `hlc-302` | RPi 3 | 1GB | `worker` ||
+| `hlc-303` | RPi 3 | 1GB | `worker` ||
+| `hlc-304` | RPi 3 | 1GB | `worker` ||
+| `hlc-305` | RPi 3 | 1GB | `worker` ||
+| `hlc-306` | RPi 3 | 1GB | `worker` ||
+| `hlc-307` | RPi 3 | 1GB | `worker` ||
+| `hlc-308` | RPi 3 | 1GB | `worker` ||
 
 The Raspberry Pi 3's are really low on RAM, but are great for now with lightweight webserver loads, and can be replaced with more RPi 4's or RPi 5's down the line.
 
