@@ -72,6 +72,6 @@ Honorable mention to Yanosh still hanging in there as Delorean's official keyboa
 ## network
 
 > [!NOTE]
-> I'm still in the process of finishing the network configuration and will write this out when done!
+> I'm still in the process of finishing the network configuration and will write this out when done. In the meantime, here's a video of [celebrities explaining DevOps](https://www.youtube.com/watch?v=QxvmO-QlxJQ).
 
 I'll write up some more details on how I built out the network later. In the meantime, check out how I started building the [happy little cloud](hlc)!
