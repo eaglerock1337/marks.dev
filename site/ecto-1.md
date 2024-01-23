@@ -59,6 +59,8 @@ I wanted to keep the tradition going, and eventually settled on `ecto-1`, the ic
 
 ## the plan
 
+*"So why are you came?"* <sub>~  Dr. Janosz Poha, *Ghostbusters 2*</sub>
+
 Currently my goal is to complete work on the [Happy Little Cloud](hlc), as I will be deploying the Ecto-1 in the same manner with the same tech stack. If I can get everything sorted there first, I can hit the ground running with the more serious silicon.
 
 Once I'm ready, I plan to build `egon`, the first of the four Ryzen nodes. I originally spec'd out the servers in 2022 with the following build in mind:
@@ -75,7 +77,9 @@ Since the 7000 series of Ryzen processors are out and prices and availability ha
 
 ## cluster services
 
- I plan to host the following services:
+*"Soon, the city will be mine and Vigo's... Mainly Vigo's."* <sub>~  Dr. Janosz Poha, *Ghostbusters 2*</sub>
+
+I plan to host the following services:
 
 - New `eagleworld.net` homepage & proxy
 - Fileserver attached to HLC's NextCloud server
