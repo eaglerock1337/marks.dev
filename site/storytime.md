@@ -1,6 +1,7 @@
 # story time
 
 <!-- markdownlint-disable MD033 -->
+*"Spared no expense."* <sub>~ John Hammond, *Jurassic Park*</sub><p>
 *"Don't get cheap on me, Dodgson. That was Hammond's mistake."* <sub>~ Dennis Nedry, *Jurassic Park*</sub>
 
 I definitely have my share of stories from my time in the trenches. I'll share them along as I think of them.
