@@ -112,7 +112,7 @@ I'm done with manual deployments at home. Here's the CI/CD pipeline for `marks.d
 1. make [Docsify](https://docsify.js.org/#/) site changes, commit code, and merge to [GitHub](https://github.com/eaglerock1337/marks.dev)
 2. my [GitHub Action](https://github.com/eaglerock1337/marks.dev/blob/main/.github/workflows/build-and-release.yaml) triggers on push to the main branch
 3. [the pipeline](https://github.com/eaglerock1337/marks.dev/actions/workflows/build-and-release.yaml) builds the `marks.dev` Docker image and pushes to Docker Hub
-4. [the pipeline](https://github.com/eaglerock1337/marks.dev/actions/workflows/build-and-release.yaml) checks out the [`happy-little-cloud` repo](https://github.com/eaglerock1337/happy-little-cloud) and updates the [site version](https://github.com/eaglerock1337/happy-little-cloud/blob/main/marks.dev/Chart.yaml#L16)
+4. [the pipeline](https://github.com/eaglerock1337/marks.dev/actions/workflows/build-and-release.yaml) checks out the [`happy-little-cloud` repo](https://github.com/eaglerock1337/happy-little-cloud) and [updates the site version](https://github.com/eaglerock1337/happy-little-cloud/commit/8c7a8ed22bac50b9af79477dd5cabe682b15624f)
 5. the [ArgoCD Application](https://github.com/eaglerock1337/happy-little-cloud/blob/main/hlc/templates/marks.dev.yaml) monitors the Helm chart change and syncs the desired state
 6. the `marks.dev` deployment performs a `rollout restart` with the new image
 
