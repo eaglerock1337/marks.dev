@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD033 -->
 <div style="text-align: center;">
 
-!["A picture of my homelab in the dark with fancy, blinky lights."](./_media/hlc.jpg "Who doesn't love colorful, blinky lights?")*The obligatory Hollywood Shot* <sup>:tm:</sup>.
+!["A picture of my homelab in the dark with fancy, blinky lights."](./_media/hlc.jpg "Who doesn't love colorful, blinky lights?")*The obligatory [Hollywood Lights](storytime#hollywood-lights)* <sup>:tm:</sup>.
 </div>
 
 I've been wanting to upgrade my homelab for a while. After getting my home wired with Ethernet during renovations, I had an opportunity to redo my entire home network from scratch, and wanted to build it out as professionally as I could. Most of my professional work has had to cut corners somewhere for practical business reasons, but I could do this without a timeline, other than replacing my current aging servers before they beep their last boop.
@@ -20,13 +20,16 @@ I'm very much a fan of building things in a compact and efficient manner, especi
 - [4-node Ryzen 7 based Kubernetes Cluster](https://pcpartpicker.com/user/EagleRock/saved/#view=Csv4pg)
 - [APC Back-UPS Pro 1500VA Uninterruptable Power Supply](https://www.apc.com/us/en/product/BN1500M2/apc-backups-pro-1500va-tower-120v-10-nema-515r-outlets-lcd-1-usb-type-c-+-1-usb-type-a-ports/)
 
-The specs have been tweaked throughout the process (especially the network hardware), and the hardware list needs to be refreshed for 2024, but the plan essentially remains the same.
+The specs have been tweaked throughout the process (especially the network hardware), and the hardware list needs to be refreshed for 2024, but the plan essentially remains the same: replace with new hardware, use [Kubernetes](https://kubernetes.io/) (k8s for short) to cluster it together.
+
+>[!TIP]
+>For the [ELI5](https://www.reddit.com/r/explainlikeimfive/) version of Kubernetes, check out [this YouTube video](https://www.youtube.com/watch?v=4ht22ReBjno). Yes, it's a children's book, but don't be fooled: in my opinion, it's the best 8-minute guide to Kubernetes there is.
 
 ## the migration
 
 <div style="text-align: center;">
 
-![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=60%")<br>`delorean` *still at it today, 15 years running.*
+![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=60%")<br>`yanosh` *(left), is on its last legs and offline.*<br>`delorean` (right) *refusing to quit after 15 years.*
 </div>
 
 Prior to the project, I had the following servers at home:
@@ -36,13 +39,13 @@ Prior to the project, I had the following servers at home:
 - `stapler` - my Plex server formerly serving double-duty as a living-room set-top PC
 - `pihole` - a Raspberry Pi 4 working as my internal DNS and DNS sinkhole adblocker
 
-The gist of the migration is to migrate services before these servers meet the great daemon in the sky.
+The gist of the migration is to migrate everything off of these old servers before they meet the great daemon in the sky. Before I buy some serious hardware, however, I want to be ready to go with a new rack, network, and a Raspberry Pi Kubernetes cluster to test everything out before I get started.
 
 ## the plan
 
 <div style="text-align: center;">
 
-![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "I believe I have my stapler.")*The homelab today,* `stapler`, *and my stapler.*
+![A picture of my homelab in New Jersey.](./_media/homelab2.jpg "I believe I have my stapler.")*The homelab today,* `stapler`, *and [my stapler](https://www.youtube.com/watch?v=pHHZBmF8mk4).*
 </div>
 
 As such, my migration plan became the following:
@@ -58,7 +61,7 @@ As such, my migration plan became the following:
 - deploy first node of Ecto-1 k8s cluster
 - migrate remaining services to Ecto-1
 - repurpose `stapler` as spare gaming PC
-- decomission `delorean`, `yanosh`
+- decomission `delorean` and `yanosh`
 - [???](https://www.youtube.com/watch?v=a5ih_TQWqCA)
 - profit!
 
