@@ -21,11 +21,11 @@ In around the year 2013, I was put in charge of running a small 8-rack cage in a
 2. Use personal access card to open front door
 3. Scan card to enable biometric eye scanner on wall
 4. Scan eyes to ensure my eye match what is on file
-5. Wait for outer mantrap door to open
+5. Wait for outer mantrap door to open or retry scan
 6. Enter mantrap door, wait for door to automatically close
-7. Enter 4-digit personal PIN to enable biometric scanner
-8. Scan right index finger print on biometric scanner
-9. Wait for inner mantrap door to open
+7. Enter 4-digit personal PIN to enable biometric finger scanner
+8. Scan right index finger to ensure it matches what is on file
+9. Wait for inner mantrap door to open or retry scan
 10. Enter data center, use access card to open cage
 11. Finally go and do all the computery thingies
 
@@ -43,7 +43,6 @@ Once my eyes adjusted to the eye-piercing blue, I noticed the row of blue incand
 !["A data center mantrap door."](./_media/hollywood.jpg "It was so blue it da-ba-dee da-ba-died. :size=75%")<br>*Like this, but **way** [bluer](https://www.youtube.com/watch?v=4iwHb189X84).*
 </div>
 
-Later on that day, I ran into the manager and asked him what the lights were all about. He said, "Oh, those? Those are the Hollywood Lights<sup>:tm:</sup>. Whenever we have prospective clients and have the executives come in for a tour, they don't really know what they're looking at. So we use the Hollywood Lights<sup>:tm:</sup> to make it look cool and futuristic to them so they sign with us."
+Later on that day, I ran into the manager and asked him what the lights were all about. He said, "Oh, those? Those are the Hollywood Lights<sup>:tm:</sup>. Whenever we have prospective clients and have the executives come in for a tour, they don't really know what they're looking at. That's when we turn on the Hollywood Lights<sup>:tm:</sup> to make it look cool and futuristic so they sign with us."
 
 I learned a valuable lesson that day: you could build the best data center there is with the best security money can buy, design the most resilient and powerful cluster, or write the perfect application that does exactly what it needs to do, but at the end of the day, it all comes down to [Hollywood Lights](homelab)<sup>:tm:</sup>.
-</div>
