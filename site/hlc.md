@@ -12,7 +12,7 @@ When I first started learning about Kubernetes, it was immediately fascinated by
 
 Fast forward to around 2018, I had already been doing system administration for over a decade and was learning about DevOps tools and modern cloud architecture. When I started learning [Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way) and how all of the different components of Kubernetes worked together, it just *made sense.* The last time something made sense to me like that was when I first learned UNIX and subsequently Linux, so I knew Kubernetes was for me.
 
-As to why it made so much sense to me, it was because all of its components are clearly there for *a reason.* To the untrained eye, the complex abstraction layer between computer and software can make Kubernetes seem like an overengineered solution to a problem that doesn't exist. In reality, it is a system administrator's best friend and sidekick. By that time, [plenty of other SREs](https://www.hanselman.com/blog/how-to-build-a-kubernetes-cluster-with-arm-raspberry-pi-then-run-net-core-on-openfaas) and [other DevOps-y individuals](https://itnext.io/building-an-arm-kubernetes-cluster-ef31032636f9) were already building their own home clusters, so I knew I wanted to give one a shot.
+As to why it made so much sense to me, it was because all of its components were clearly there for *a reason.* To the untrained eye, the complex abstraction layer between computer and software can make Kubernetes seem like an overengineered solution to a problem that doesn't exist. In reality, it is a system administrator's best friend and sidekick. By the time I was learning Kubernetes, [plenty of other SREs](https://www.hanselman.com/blog/how-to-build-a-kubernetes-cluster-with-arm-raspberry-pi-then-run-net-core-on-openfaas) and [other DevOps-y individuals](https://itnext.io/building-an-arm-kubernetes-cluster-ef31032636f9) were already building their own home clusters, so I knew I wanted to give one a shot.
 
 ## the name
 
@@ -99,6 +99,24 @@ Here is the current tech stack:
 - [Helm](https://helm.sh/) for Kubernetes infrastructure-as-code
 - [GitHub Actions](https://docs.github.com/en/actions) for running tests & building Docker images
 - [ArgoCD](https://argoproj.github.io/cd/) for continuous deployment of services
+
+### automation <!-- {docsify-ignore} -->
+
+<div style="text-align: center;">
+
+[!["The ArgoCD mascot and logo."](./_media/argo.png "*AHEM* ACKSHULLY...the mascot is *technically* an argonaut.  :size=60%")](https://github.com/argoproj/argo-cd)<br>*Happy Little Cloud thanks this happy little octopus.*
+</div>
+
+I'm done with manual deployments at home. Here's the CI/CD pipeline for `marks.dev`, which I plan to follow for my other deployments:
+
+1. make [Docsify](https://docsify.js.org/#/) site changes, commit code, and merge to [GitHub](https://github.com/eaglerock1337/marks.dev)
+2. my [GitHub Action](https://github.com/eaglerock1337/marks.dev/blob/main/.github/workflows/build-and-release.yaml) triggers on push to the main branch
+3. [the pipeline](https://github.com/eaglerock1337/marks.dev/actions/workflows/build-and-release.yaml) builds the `marks.dev` Docker image and pushes to Docker Hub
+4. [the pipeline](https://github.com/eaglerock1337/marks.dev/actions/workflows/build-and-release.yaml) checks out the [`happy-little-cloud` repo](https://github.com/eaglerock1337/happy-little-cloud) and updates the [site version](https://github.com/eaglerock1337/happy-little-cloud/blob/main/marks.dev/Chart.yaml#L16)
+5. the [ArgoCD Application](https://github.com/eaglerock1337/happy-little-cloud/blob/main/hlc/templates/marks.dev.yaml) monitors the Helm chart change and syncs the desired state
+6. the `marks.dev` deployment performs a `rollout restart` with the new image
+
+The whole process takes about five minutes to complete. ArgoCD checks for changes every 3 minutes, but can be expedited in the UI or the command-line.
 
 ## cluster services
 
