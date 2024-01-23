@@ -86,17 +86,19 @@ Down the line, once I have some Raspberry Pi 5's in place, I plan to leverage [L
 
 Here is the current tech stack:
 
-- Debian 12 Bookworm
-- Ansible for baremetal server configuration
-- k3s lightweight Kubernetes bundle
-- running kubernetes version 1.28.4
-- High-availability etcd cluster data store
-- NFS (network file system) server on `hlc-401` for cluster volumes
-- nfs-subdir-external-provisioner storage provisioner
-- Traefik Ingress & web reverse proxy
-- ServiceLB NodePort load-balancing
-- cert-manager for automated TLS certificate management
-- ArgoCD for automating servers and infrastructure-as-code
+- [Debian 12 "Bookworm"](https://www.debian.org/)
+- [Ansible](https://www.ansible.com/) for baremetal server configuration
+- [k3s](https://k3s.io/) lightweight Kubernetes bundle
+- running [kubernetes](https://kubernetes.io/) version 1.28.4
+- 3-node [high-availability etcd](https://docs.k3s.io/datastore/ha-embedded) cluster data store
+- [NFS (network file system) server](https://packages.debian.org/stable/nfs-kernel-server) on `hlc-401` for cluster volumes
+- [nfs-subdir-external-provisioner](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner) storage provisioner
+- [Traefik](https://traefik.io/) Ingress & web reverse proxy
+- [KlipperLB](https://github.com/k3s-io/klipper-lb) service load-balancing
+- [cert-manager](https://cert-manager.io/) for automated TLS certificate management
+- [Helm](https://helm.sh/) for Kubernetes infrastructure-as-code
+- [GitHub Actions](https://docs.github.com/en/actions) for running tests & building Docker images
+- [ArgoCD](https://argoproj.github.io/cd/) for continuous deployment of services
 
 ## cluster services
 
