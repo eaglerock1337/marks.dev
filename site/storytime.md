@@ -40,7 +40,7 @@ Once my eyes adjusted to the eye-piercing blue, I noticed the row of blue incand
 
 <div style="text-align: center;">
 
-!["A data center mantrap door."](./_media/hollywood.jpg "It was so blue it da ba dee da ba died. :size=75%")<br>*Like this, but **way** [bluer](https://www.youtube.com/watch?v=4iwHb189X84).*
+!["A data center mantrap door."](./_media/hollywood.jpg "It was so blue it da-ba-dee da-ba-died. :size=75%")<br>*Like this, but **way** [bluer](https://www.youtube.com/watch?v=4iwHb189X84).*
 </div>
 
 Later on that day, I ran into the manager and asked him what the lights were all about. He said, "Oh, those? Those are the Hollywood Lights<sup>:tm:</sup>. Whenever we have prospective clients and have the executives come in for a tour, they don't really know what they're looking at. So we use the Hollywood Lights<sup>:tm:</sup> to make it look cool and futuristic to them so they sign with us."
