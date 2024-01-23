@@ -39,7 +39,7 @@ I would like to repurpose `stapler` as a small gaming machine and finally retire
 
 ## the name
 
-*"Dr. Venkman, go... Yes I think go... Yes, the joyfulness is over!"* <sub>~  Dr. Janosz Poha, *Ghostbusters 2*</sub>
+*"Dr. Venkman, go... Yes I think go... Yes, the joyfulness is over!"* <sub>~ Dr. Janosz Poha, *Ghostbusters 2*</sub>
 
 <div style="text-align: center;">
 
@@ -59,7 +59,7 @@ I wanted to keep the tradition going, and eventually settled on `ecto-1`, the ic
 
 ## the plan
 
-*"So why are you came?"* <sub>~  Dr. Janosz Poha, *Ghostbusters 2*</sub>
+*"So why are you came?"* <sub>~ Dr. Janosz Poha, *Ghostbusters 2*</sub>
 
 Currently my goal is to complete work on the [Happy Little Cloud](hlc), as I will be deploying the Ecto-1 in the same manner with the same tech stack. If I can get everything sorted there first, I can hit the ground running with the more serious silicon.
 
@@ -77,7 +77,7 @@ Since the 7000 series of Ryzen processors are out and prices and availability ha
 
 ## cluster services
 
-*"Soon, the city will be mine and Vigo's... Mainly Vigo's."* <sub>~  Dr. Janosz Poha, *Ghostbusters 2*</sub>
+*"Soon, the city will be mine and Vigo's... Mainly Vigo's."* <sub>~ Dr. Janosz Poha, *Ghostbusters 2*</sub>
 
 I plan to host the following services:
 
