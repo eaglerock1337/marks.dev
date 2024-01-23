@@ -8,7 +8,7 @@ I definitely have my share of stories from my time in the trenches. I'll share t
 
 ## hollywood lights
 
-**Okay, what the hell are Hollywood Lights<sup>:tm:</sup>?**
+**What the hell are Hollywood Lights<sup>:tm:</sup>?**
 
 <div style="text-align: center;">
 
