@@ -29,7 +29,7 @@ The specs have been tweaked throughout the process (especially the network hardw
 
 <div style="text-align: center;">
 
-![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=60%")<br>`yanosh` *(left), is on its last legs and offline.*<br>`delorean` (right) *refusing to quit after 15 years.*
+![A picture of my oldest running server on the floor.](./_media/delorean.jpg "You may not like it, but this is what the peak server hardware form looks like. :size=60%")<br>`yanosh` *(left), is on its last legs and offline.*<br>`delorean` *(right), still kicking after 15 years.*
 </div>
 
 Prior to the project, I had the following servers at home:
