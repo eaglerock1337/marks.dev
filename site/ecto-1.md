@@ -6,6 +6,11 @@ Egon: *"Not good."*<br>
 Winston: *"Tell him 'bout the Twinkie."*<br>
 Peter: *"What about the Twinkie?"* <sub>~ *Ghostbusters (1984)*</sub>
 
+<div style="text-align: center;">
+
+!["A picture of the Ecto-1 from Ghostbusters (1984)."](./_media/ecto-1.jpg "Everybody can relax, I found the car. Needs some suspension work, and shocks, and uh, brakes, brake pads, linings, steering box, transmission, rear end, maybe new rings, also mufflers, a little wiring...")<br>*Old-school cool.*
+</div>
+
 Once I get the [Happy Little Cloud](hlc) in good working order, my plan is to finally replace my aging servers with some proper modern hardware. I didn't want to buy the hardware until I was sure I was ready, and finishing Happy Little Cloud is my litmus test.
 
 ## current servers
