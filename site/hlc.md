@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD033 -->
 <div style="text-align: center;">
 
-[!["Bob Ross painting a cloud."](./_media/bob-ross.gif "Let's build just a happy little cloud.")<br>*I quite literally took his advice.*](https://hlc.marks.dev)
+[!["Bob Ross painting a happy little cloud."](./_media/bob-ross.gif "And you know what? You're gonna build that happy little cloud too, I just know it. Why? Because I said so, that's why. You wouldn't want to have a...happy little accident, would you?")<br>*I quite literally took his advice.*](https://hlc.marks.dev)
 </div>
 
 ## the idea
@@ -104,7 +104,7 @@ Here is the current tech stack:
 
 <div style="text-align: center;">
 
-[!["The ArgoCD mascot and logo."](./_media/argo.png "*AHEM* ACKSHULLY...the mascot is *technically* an argonaut.  :size=60%")](https://github.com/argoproj/argo-cd)<br>*Happy Little Cloud thanks this happy little octopus.*
+[!["The ArgoCD mascot and logo."](./_media/argo.png "*AHEM* ACKSHUALLY...the mascot is *technically* an argonaut. *CHORTLE* :size=60%")](https://github.com/argoproj/argo-cd)<br>*Happy Little Cloud thanks this happy little octopus.*
 </div>
 
 I'm done with manual deployments at home. Here's the CI/CD pipeline for `marks.dev`, which I plan to follow for my other deployments:
