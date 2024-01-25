@@ -42,7 +42,7 @@ I must, however credit the original Happy Little Cloud for its dutiful services 
 
 <div style="text-align: center;">
 
-!["Happy Little Cloud Mark 2 in its server rack."](./_media/hlc-mk2.jpg "Happy Little Cloud Mark 2.")*Happy Little Cloud today in its happy little rack.*
+!["Happy Little Cloud Mark 2 in its server rack."](./_media/hlc-mk2.jpg "Happy Little Cloud Mark 2: Electric Boogaloo.")*Happy Little Cloud today in its happy little rack.*
 </div>
 
 When I decided to start working on the homelab, I wanted to cram as many Raspberry Pis as I could fit. The [12-node, 2U rack enclosure](https://www.amazon.com/gp/product/B098924W9M/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) I found was perfect. I had the eight Pi 3's already and one RPi 4, but wasn't able to purchase the rest due to the global semiconductor supply-chain crisis at the time. I was also unable to find Ubiquiti devices in stock, so I had put the project aside for a while.
