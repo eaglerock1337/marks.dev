@@ -23,7 +23,7 @@ I'm very much a fan of building things in a compact and efficient manner, especi
 The specs have been tweaked throughout the process (especially the network hardware), and the hardware list needs to be refreshed for 2024, but the plan essentially remains the same: replace with new hardware, use [Kubernetes](https://kubernetes.io/) (k8s for short) to cluster it together.
 
 >[!TIP]
->For the [ELI5](https://www.reddit.com/r/explainlikeimfive/) version of Kubernetes, check out [this YouTube video](https://www.youtube.com/watch?v=4ht22ReBjno). Yes, it's a children's book, but don't be fooled: in my opinion, it's the best 8-minute guide to Kubernetes there is.
+>For the [ELI5](https://www.reddit.com/r/explainlikeimfive/) version of Kubernetes, check out [this YouTube video](https://www.youtube.com/watch?v=Q4W8Z-D-gcQ). Yes, it's a children's book, but don't be fooled: in my opinion, it's the best 8-minute guide to Kubernetes there is.
 
 ## the migration
 

@@ -53,14 +53,14 @@ I would like to repurpose `stapler` as a small gaming machine and finally retire
 
 As you might have noticed, all of my servers are named after people or props from my favorite movies and shows. Here's my running list so far:
 
-- `delorean` - the *Back to the Future* time machine
-- `dodgson` - *Jurassic Park* character and [YTMND star](https://dodgson.ytmnd.com/)
+- `delorean` - *Back to the Future* time machine
+- `dodgson` - *Jurassic Park* character/[YTMND star](https://dodgson.ytmnd.com/)
 - `yanosh` - *Ghostbusters 2* villain/comic relief
 - `stapler` - red stapler from *Office Space*
-- `gibson` - the mainframe computer from *Hackers*
+- `gibson` - mainframe computer from *Hackers*
 - `happy little cloud` - recurring character of *The Joy of Painting*
 
-I wanted to keep the tradition going, and eventually settled on `ecto-1`, the iconic vehicle from Ghostbusters. The Ghostbusters themselves, `egon`, `peter`, `ray`, and `winston`, will be perfect names for the four nodes of the cluster.
+I wanted to keep the tradition going (especially with a memelord like ["yanosh"](https://www.youtube.com/watch?v=YL8sc3uJWSM)), and eventually settled on `ecto-1`, the iconic vehicle from Ghostbusters. The Ghostbusters themselves, `egon`, `peter`, `ray`, and `winston`, will be perfect names for the four nodes of the cluster.
 
 ## the plan
 

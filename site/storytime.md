@@ -36,7 +36,7 @@ In around the year 2013, I was put in charge of running a small 8-rack cage in a
 
 One day, I was working in the company cage as normal when all of the lights suddenly go out. It wasn't a big deal, as each cage had its own light on a timer, but it was unexpected in the middle of the day. Then, a few seconds later, the entire data center is bathed in deep blue light.
 
-Once my eyes adjusted to the eye-piercing blue, I noticed the row of blue incandescent lamps along the data center wall as the manager walked by with a few people in suits in tow. I shrugged it off and kept working until the lights went back to normal about 10 minutes later.
+Once my eyes adjusted to the eye-piercing blue, I noticed the row of blue incandescent lamps along the data center wall as the manager walked by with a few people in suits in tow. I shrugged it off, turned the cage light on, and kept working until the lights went back to normal a few minutes later.
 
 <div style="text-align: center;">
 

@@ -95,7 +95,7 @@ Here is the current tech stack:
 - [nfs-subdir-external-provisioner](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner) storage provisioner
 - [Traefik](https://traefik.io/) Ingress & web reverse proxy
 - [KlipperLB](https://github.com/k3s-io/klipper-lb) service load-balancing
-- [cert-manager](https://cert-manager.io/) for automated TLS certificate management
+- [cert-manager](https://cert-manager.io/) for automated TLS certificate management (no more expired certs!)
 - [Helm](https://helm.sh/) for Kubernetes infrastructure-as-code
 - [GitHub Actions](https://docs.github.com/en/actions) for running tests & building Docker images
 - [ArgoCD](https://argoproj.github.io/cd/) for continuous deployment of services
@@ -122,22 +122,23 @@ The whole process takes about five minutes to complete. ArgoCD checks for change
 
 ### current services <!-- {docsify-ignore} -->
 
-The following services are running on Happy Little Cloud right now:
+The following public websites are running on Happy Little Cloud right now:
 
-- [marks.dev](https://marks.dev) - :cloud: Coming to you live from the Happy Little Cloud
-- [hlc.marks.dev](https://hlc.marks.dev) - :paintbrush: Gotta spread the Bob Ross love with a single-serving website
-- mr-poopybutthole - :trollface: meme sharing and troll bot for my Discord server
+- [marks.dev](https://marks.dev) - :cloud: Coming to you live from the Happy Little Cloud! :cloud:
+- [hlc.marks.dev](https://hlc.marks.dev) - :framed_picture: Gotta spread the Bob Ross love with a single-serving website :paintbrush:
+
+There are plenty of internal services as well:
+
+- mr-poopybutthole - :trollface: meme sharing and troll bot for my Discord server :trollface:
+- [prometheus.marks.dev](https://prometheus.io/docs/introduction/overview/) - :book: Data & metrics gathering :book:
+- [grafana.marks.dev](https://grafana.com/) - :bar_chart: Data & metrics observability :bar_chart:
 
 ### upcoming services <!-- {docsify-ignore} -->
 
 The following services are also planned for Happy Little Cloud:
 
-- Prometheus metrics gathering
-- Grafana data visualization & dashboards
-- Bind9 internal recursive DNS server
-- Pihole DNS sinkhole
 - Dynamic DNS management service
-- Cloud services through NextCloud server
+- Cloud apps with [NextCloud](https://nextcloud.com/)
 - Upptime status page
 
 Once the above services are online, I will be able to migrate off of Google Drive and start getting my digital life in order.
