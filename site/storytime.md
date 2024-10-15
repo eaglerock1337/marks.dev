@@ -6,6 +6,45 @@
 
 I definitely have my share of stories from my time in the trenches. I'll share them along as I think of them.
 
+## just a directory command
+
+<div style="text-align: center;">
+
+!["A picture of the big red EMERGENCY PULL button from an IBM System/360 mainframe."](./_media/button.jpg "You know you want to pull this. I know you want to pull this. Who the hell wouldn't want to pull this? :size=80%")<br>Despite your best judgement, production is in fact *not* the best place to get curious.
+</div>
+
+Back in the year 2011, the year that famously brought us [planking](https://knowyourmeme.com/memes/planking), I was working in a global network operations center for a low-latency money market platform. This involved literally hundreds of servers responsible for connecting all parties worldwide. This was accomplished by letting clients connect to one of dozens of broker servers across 6 worldwide data centers, while active trades and arbitration were handled on a single server. This single server was in one of three primary data centers (New York, London, and Singapore) and did a follow-the-sun rotation to follow where peak trading traffic occurred. Needless to say, if something bad happened to this one server, all trading stops worldwide, so that was an all-hands-on-deck, money-hemorrhaging "we gotta fix this now" kind of event that senior leadership paid close attention to, and rightfully so since our SLAs were very strict.
+
+If you aren't familiar with low-latency computing and what goes into it, I can best give you the vibe by paraphrasing how one of the grizzled, heavily-bearded system architects of this platform described how the servers were spec'd out and why they were so large and expensive:
+
+> "You may notice that even at peak load times our servers barely get over 5% CPU load. It's not an accident that these systems are as underused as they are. Basically, we figured out how much computing power we needed, then we multiplied that by 10. This would ensure that even at peak time, the systems were only running at a 10% load. Why? Because if you run a system at a 90% load, while you in theory shouldn't have any problems, there will be hiccups. All it takes is a single kernel thread to hang for a second or a tiny bit of iowait to cause a split-second delay in a production service.
+>
+> "Those occasional hiccups don't matter much to most business, but we aren't working with normal people. We are working with day-traders that are literally trading millions of dollars trying to beat someone else out. These are guys who essentially grew up playing first-person shooters who have reaction times that are insane. I remember meeting these guys on-site when a trader was trying to point out trading delays we couldn't see. I can show you the video we recorded of this guy pointing out trading delays that were less than 50 milliseconds, and that bit of time can make all the difference in the world in this industry.
+>
+> "When you're trading billions of dollars, just one delay can lose ridicuous sums of money. So our clients really care about our system working and we have strict SLAs to reflect that. Too many slow trades and our clients use our platform for free for the entire day. Therefore, we need our machines to be ridiculously overpowered for the job, because it needs to work every single time."
+
+The team I worked on at the time was a group of 8 sysadmins that worked in a 12-hour shift rotation. Because my team was an escalation layer and only had about an hour or two of non-incident work a day, the night shift could drag on for hours with literally nothing happening. As you can imagine, just staying awake was part of the challenge of the job. The other challenge, however, was being ready for when *shit goes down*. The workload was light because we were essentially being paid to do the right thing at the right time, every time.
+
+One night, I was working the night shift on an unparticularly boring evening. During downtime, it was pretty common for us to train and practice to stay alert and to stay crisp with all critical procedures. That night, we had a third sysadmin learning on the job from myself and another experienced admin. At this point, he was working for about a month and pretty much kept quiet and to himself.
+
+By this point, it was early morning, during the height of trading in Asia, and it had been quiet all night. Suddenly, our monitoring TVs all lit up with red critical alarms. These were alarms I had never seen before after over a year of working there, and I saw they were for the active arbitrator. The manager on duty and I lock eyes, and I said "yep, we're gonna need a bridge...this looks like a big one." I immediately get my headset and start calling out loud that I am logging in to check, when the new hire taps my arm and says, "That was me."
+
+I stop and look at him, puzzled. He says, "I was running a directory command. I stopped it." At this point, I look back at my computer and all of the alarms have stopped. At this point, the manager on duty is involved, who already raised the bat signal to upper management. At this point, we had a bunch of slow trades, which undoubtedly had put us under SLA level with a bunch of our clients. Ballpark estimation after the fact was lost revenue on the order of over $100,000 from this one incident. So, this put us all in a pretty big predicament.
+
+Since this was the early 2010s and blameless engineering culture hadn't exactly hit the world of finance, and since this kind of mistake can cost the company multiple times your yearly salary, this little oopsie could result in immediate termination. Since the manager on duty was an empathetic type and didn't want to let the [FNG](https://en.wikipedia.org/wiki/FNG_syndrome) take the fall in his first month, we all agreed to call the incident a monitoring glitch and to let lessons be learned. I had my personal reticence to the arrangement, but also agreed that a guy shouldn't be terminated for one stupid mistake, especially if it's the kind someone does once and never again.
+
+After a lengthy phone conversation on the incident bridge, we all were able to hang up and relax for a bit before the transition to the London data center. At some point, the new guy turns to me and says "I don't get what all the fuss was about. I was just running a recursive directory command." At this point I almost see red. I couldn't believe that this guy said this to me, especially after a long conversation with senior management grilling about the alarms. I end up saying, "What did you do that for?" He responds, "I was trying to look around the filesystem."
+
+I was very quickly losing professional respect for this guy at this point. Not only did he seem to not care about something that literally everyone else in the room cared about, it was clear to me he didn't understand the technical ramifications of his actions. The reason I say this is because he was trying to play around on the core server to understand it, and out of the 6 servers online (active/passive pair per data center), he decides to log in and play around on the *active* server in the *active* data center. Literally out of 6 servers, he decides to do this on the only one in the world is making money for the company at that point in time. I then respond back a bit more heatedly. "You're scanning a filesystem on a live arbitrator. That could've affected thousands of trades with iowait in that time. You can't run a command like that on a heavily loaded system and not expect it to do something!" He responds back, "It was just a directory command."
+
+That pretty much ended the conversation for me and threw all professional respect I had for this person out the window permanently. Not only did he not care about how this affected the company, he didn't care at all about learning from the mistake or even why people were upset about his actions. As someone who hasn't forgotten what it's like to be a beginner at this trade, I always believe in giving someone a second chance, especially if they are eager and willing to learn.
+
+I also don't like to blame people for mistakes in general, because it doesn't really do anything. Leave the job performance stuff to managers in one-on-one meetings. As for my job and the infrastructure, I don't care if you accidentally pull the EMERGENCY PULL button that powers off the mainframe and costs the company hundreds of thousands of dollars. I would rather everyone fess up and we talk about what happened, and we can figure out a preventative solution. For example, why the hell do we need a giant EMERGENCY PULL killswitch on the mainframe that could so easily be accidentally pulled by an otherwise smart engineer?
+
+So while he got away with it and that colleage became a thorn in my side for a good amount of time, I learned two lessons from this scenario. The first was how crippling a toxic blame-game, CYA culture can be to an engineering org. You never get the real facts and really solve problems because it's in everyone direct interest to not get fired and to not tell the truth.
+
+The second lesson was a bit simpler: even though most engineers in your field are generally smart, curious, and are constantly improving themselves, *some people just can't be taught a damn thing.*
+
 ## hollywood lights
 
 **What the hell are Hollywood Lights<sup>:tm:</sup>?**
@@ -15,17 +54,17 @@ I definitely have my share of stories from my time in the trenches. I'll share t
 !["A screen capture of the data center from the movie Jurassic Park."](./_media/jurassicpark.jpg "I am totally unappreciated in my time. You can run this whole park from this room with minimal staff for up to 3 days. You think that kind of automation is easy? Or cheap? You know anybody who can network 8 connection machines and debug 2 million lines of code for what I bid for this job? Because if he can I'd like to see him try. :size=80%")<br>*[Hold on to your butts](https://butt.holdings).*
 </div>
 
-In around the year 2013, I was put in charge of running a small 8-rack cage in a colocation data center in Parsippany. It was recently opened, had state-of-the-art security, and made sure you *knew* it. Here's what it took to get inside the cage:
+In around the year 2013, when [advice animals](https://knowyourmeme.com/memes/advice-animals) roamed the Internets, I was put in charge of running a small 8-rack cage in a colocation data center in Parsippany. It was recently opened, had state-of-the-art security, and made sure you *knew* it. Here's what it took to get inside the cage:
 
 1. Arrive at a building with zero outdoor signage
 2. Use personal access card to open front door
-3. Scan card to enable biometric eye scanner on wall
+3. Scan card to enable biometric eye scanner on lobby wall
 4. Scan eyes to ensure my eye match what is on file
-5. Wait for outer mantrap door to open or retry scan
+5. Wait for outer mantrap door to open or try again
 6. Enter mantrap door, wait for door to automatically close
 7. Enter 4-digit personal PIN to enable biometric finger scanner
 8. Scan right index finger to ensure it matches what is on file
-9. Wait for inner mantrap door to open or retry scan
+9. Wait for inner mantrap door to open or try again
 10. Enter data center, use access card to open cage
 11. Finally go and do all the computery thingies
 
