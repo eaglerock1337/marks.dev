@@ -101,13 +101,13 @@ Since my company provided the laptops, we had access to one of their Active Dire
 
 One particular user by the name of Jeffery called up the help desk as a new hire who couldn't log on to his new laptop. I start to troubleshoot the issue with him and, in a practice that was standard at the time but would make me cringe today, I requested his password as given to him in the package and attempted to log on with his account on our test server.
 
-The email accounts for this company were `lastname.firstname@company.com`, so enter his username as normal. Assuming this guy's last name was Smith, and assuming we are in the movie Office Space, it would've been `smith.jeffery@initech.com`. I then enter his password and was able to log in successfully.
+The email accounts for this company were `lastname.firstname@company.com`, so I enter his username as normal. Assuming this guy's last name was Smith, and assuming we are in the movie Office Space, it would've been `smith.jeffery@initech.com`. I then enter his password and was able to log in successfully.
 
-At this point I'm confused, and say out loud on the call, "Huh, the login worked on my side...not sure what's going on." Jeffrey then exclaims, "OH! I know what's wrong! I've been spelling my name as J-E-F-F-R-E-Y." I then say, "Oh, is your name misspelled? I should be able to get that fixed for you."
+At this point I'm confused, and say out loud on the call, "Huh, the login worked on my side...not sure what's going on." Jeffery then exclaims, "OH! I know what's wrong! I've been spelling my name as J-E-F-F-R-E-Y." I then say, "Oh, is your name misspelled? I should be able to get that fixed for you."
 
 This guy's response absolutely floored me, that to this day, I still don't believe it. Here it is, in verbatim:
 
->"No, my name is spelled correctly. However, most people spell Jeffrey with R-E-Y, and so I type it like that because I figured it would log me on better that way."
+>"No, my name is spelled correctly. However, most people spell Jeffrey with R-E-Y, so I type it like that because it would log me on better that way."
 
 At this point, with my head *literally* in my hands, I have to ask this guy, "Can you please try spelling your name correctly?" After a few seconds, he remarks "Yes! That worked! Thanks so much for your help!"
 
