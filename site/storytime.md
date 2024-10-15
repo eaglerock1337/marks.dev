@@ -51,7 +51,7 @@ I learned a valuable lesson that day: you could build the best data center there
 
 <div style="text-align: center;">
 
-!["A picture of the big red EMERGENCY PULL button from an IBM System/360 mainframe."](./_media/button.jpg "You know you want to pull this. I know you want to pull this. Who the hell wouldn't want to pull this? :size=80%")<br>Despite your best judgement, production is in fact *not* the best place to get curious.
+!["A picture of the big red EMERGENCY PULL button from an IBM System/360 mainframe."](./_media/button.jpg "You know you want to pull this. I know you want to pull this. Who the hell wouldn't want to pull this? :size=80%")<br>Production is *not* the best place to get curious.
 </div>
 
 Back in the year 2011, the year that famously brought us [planking](https://knowyourmeme.com/memes/planking), I was working in a global network operations center for a low-latency money market trading platform. This involved literally hundreds of servers responsible for connecting all parties worldwide. This was accomplished by letting clients connect to one of dozens of broker servers across 6 worldwide data centers, while active trades and arbitration were handled on a single VAX server running VMS. This single server was in one of six primary data centers across 3 regions (New York, London, and Singapore) and did a follow-the-sun rotation to follow where peak trading traffic occurred. Needless to say, if something bad happened to this one server, all trading was affected worldwide, so that was an all-hands-on-deck, money-hemorrhaging, "we gotta fix this now" kind of event that senior leadership paid close attention to, and rightfully so since our SLAs were very strict.
