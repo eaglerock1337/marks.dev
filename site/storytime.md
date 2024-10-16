@@ -47,7 +47,7 @@ Later on that day, I ran into the manager and asked him what the lights were all
 
 I learned a valuable lesson that day: you could build the best data center there is with the best security money can buy, design the most resilient and powerful cluster, or write the perfect application that does exactly what it needs to do, but at the end of the day, it all comes down to [Hollywood Lights](homelab "Back to the homelab page")<sup>:tm:</sup>.
 
-## just a directory command
+## just a `DIRECTORY` command
 
 <div style="text-align: center;">
 
