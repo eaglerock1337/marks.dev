@@ -15,14 +15,15 @@
 
       shellHook = ''
         export NODE_PATH="$(npm root -g)"
-        export PATH="$(npm bin -g):$PATH"
+        # export PATH="$(npm bin -g):$PATH"
+        export PATH="~/git/marks.dev/node_modules/.bin:$PATH"
 
         if ! command -v docsify > /dev/null; then
           echo "📦 Installing docsify-cli..."
-          npm install -g docsify-cli
+          npm install docsify-cli
         fi
 
-        echo "📚 Docsify environment ready! Run: docsify serve ./"
+        echo "📚 Docsify environment ready! Run: docsify serve site"
       '';
     };
   };

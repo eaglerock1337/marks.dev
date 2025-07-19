@@ -11,14 +11,13 @@ More to come later.
 ## development
 
 ```bash
-npm i docsify-cli -g
-cd site
-docsify serve
+2npm i docsify-cli -g
+docsify serve site
 ```
 
 This allows local preview and live editing of the site.
 
 ## credits
 
-- Documentation-as-code courtesy of [Docsify](https://docsify.js.org).
+- Documentation-as-code courtesy of [Docsify](https://doc1sify.js.org).
 - Icon courtesy of [Online Web Fonts](https://www.onlinewebfonts.com/icon/462515).

@@ -1,1 +1,3 @@
 site/_media/raw/*
+node_modules
+.direnv
