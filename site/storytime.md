@@ -6,6 +6,20 @@
 
 I definitely have my share of stories from my time in the trenches. I'll share them along as I think of them.
 
+## memorable quotes
+
+Here's some of my favorite quotes from coworkers I've been fortunate enough to work beside:
+
+- "Sounds like the code is ass." <sub>~ Tyler, on a fire</sub>
+
+- "Never deploy when everyone's gone home and the SRE's are drunk." <sub>~ Jaron</sub>
+
+- "The only thing I know about ethics is that you're supposed to hit fewer people with a train." <sub>~ Laura</sub>
+
+- "It scratches an itch you can't scratch any other way." <sub>~ Ryan, about DevOps</sub>
+
+- "Some people get paid for what they do. Other people get paid for what they know." <sub>~ Terrence</sub>
+
 ## hollywood lights
 
 **What the hell are Hollywood Lights<sup>:tm:</sup>?**
@@ -36,7 +50,7 @@ In around the year 2013, when [advice animals](https://knowyourmeme.com/memes/ad
 
 One day, I was working in the company cage as normal when all of the lights suddenly go out. It wasn't a big deal, as each cage had its own light on a timer, but it was unexpected in the middle of the day. Then, a few seconds later, the entire data center is bathed in deep blue light.
 
-Once my eyes adjusted to the eye-piercing blue, I noticed the row of blue incandescent lamps along the data center wall as the manager walked by with a few people in suits in tow. I shrugged it off, turned the cage light on, and kept working until the lights went back to normal a few minutes later.
+Once my eyes adjusted to the eye-piercing blue, I noticed the row of blue incandescent light bulbs along the data center wall as the manager walked by with a few people in suits in tow. I shrugged it off, turned the cage light on, and kept working until the lights went back to normal a few minutes later.
 
 <div style="text-align: center;">
 
@@ -76,7 +90,7 @@ I stop and look at him, puzzled. He says, "I was running a `DIRECTORY` command. 
 
 Since this was the early 2010s and blameless engineering culture hadn't exactly hit the world of finance, and since this kind of mistake could cost the company multiple times our yearly salary, this little oopsie could result in immediate termination. Since the manager on duty was an empathetic type and didn't want to let the [FNG](https://en.wikipedia.org/wiki/FNG_syndrome) take the fall in his first month, we all agreed to call the incident a monitoring glitch and to let lessons be learned. I had my personal reticence to the arrangement, but also agreed that a guy shouldn't be terminated for one stupid mistake, especially if it's the kind someone does once and never again.
 
-After a lengthy phone conversation on the incident bridge, we all were able to hang up and relax for a bit before the transition to the London data center. At some point, the new guy turns to me and says "I don't get what all the fuss was about. I was just running a `DIRECTORY` command." At this point I almost see red. I couldn't believe that this guy said this to me, especially after a long conversation with senior management grilling about the alarms. I end up saying, "What were you doing that for in the first place?" He responds, "I was just playing around trying to look around the filesystem."
+After a lengthy phone conversation on the incident bridge, we all were able to hang up and relax for a bit before the transition to the arbitrator in the London data center. At some point, the new guy turns to me and says "I don't get what all the fuss was about. I was just running a `DIRECTORY` command." At this point I almost see red. I couldn't believe that this guy said this to me, especially after a long conversation with senior management grilling about the alarms. I end up saying, "What were you doing that for in the first place?" He responds, "I was just playing around trying to look around the filesystem."
 
 I was very quickly losing professional respect for this guy at this point. Not only did he seem to not care about something that literally everyone else in the room cared about, it was clear to me that he didn't understand the technical ramifications of his actions. The reason I say this is because he was trying to play around on the server to understand it, and out of the 6 servers online (active/passive pair per data center), he decides to log in and play around on the *active* server in the *active* data center. Literally out of 6 servers, he decides to do this on the only one in the world that is making money for the company at that point in time. I then respond back a bit more heatedly. "You're scanning a filesystem on a live arbitrator. That could've affected thousands of trades with iowait in that time. You can't run a command like that on a heavily loaded system and not expect it to do something!" He responds back, "It was just a `DIRECTORY` command."
 
