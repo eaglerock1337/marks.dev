@@ -10,15 +10,15 @@ I definitely have my share of stories from my time in the trenches. I'll share t
 
 Here's some of my favorite quotes from coworkers I've been fortunate enough to work beside:
 
-- "Sounds like the code is ass." <sub>~ Tyler, on a fire</sub>
+"Sounds like the code is ass." <sub>~ Tyler, on a fire</sub>
 
-- "Never deploy when everyone's gone home and the SRE's are drunk." <sub>~ Jaron</sub>
+"Never deploy when everyone's gone home and the SREs are drunk." <sub>~ Jaron</sub>
 
-- "The only thing I know about ethics is that you're supposed to hit fewer people with a train." <sub>~ Laura</sub>
+"The only thing I know about ethics is that you're supposed to hit fewer people with a train." <sub>~ Laura</sub>
 
-- "It scratches an itch you can't scratch any other way." <sub>~ Ryan, about DevOps</sub>
+"It scratches an itch you can't scratch any other way." <sub>~ Ryan, about DevOps</sub>
 
-- "Some people get paid for what they do. Other people get paid for what they know." <sub>~ Terrence</sub>
+"Some people get paid for what they do. Other people get paid for what they know." <sub>~ Terrence</sub>
 
 ## hollywood lights
 
