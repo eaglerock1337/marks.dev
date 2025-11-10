@@ -8,20 +8,22 @@
 
 ## tomeclicker
 
-I started working on an [incremental game](https://en.wikipedia.org/wiki/Incremental_game) in my spare time as a good excuse for me to learn some front-end development, including working with [svelte](https://svelte.dev/). I haven't done much work on this lately in favor of working on the homelab, but want to pick this back up once my hardware is more settled.
+I started working on an [incremental game](https://en.wikipedia.org/wiki/Incremental_game) in my spare time as a good excuse for me to learn some front-end development, including working with [svelte](https://svelte.dev/). More recently, I am finding this project great for learning how to work effectively with Claude Code, and had fun creating a team of Claude agents for doing specific tasks, which I'm now calling the [Boi Squad](https://github.com/eaglerock1337/tomeclicker/tree/main/.claude/agents).
 
-Here's some features the game will have:
+My goals for the game are pretty simple:
 
-- open-source and free to play (no freemium or pay-to-win :poop:)
-- web-based game with mobile and desktop gameplay
+- open-source and free to play (none of that freemium or pay-to-win :poop:)
+- web-based game optimized for both mobile and desktop gameplay
 - all the usual incremental game numbers-go-up endorphin goodness
-- training for adventuring, gaining exp, leveling up, improving stats
-- active and idle gameplay
-- a prestige system for gaining adventure points (AP) upon game restart
-- short adventuring to gain exp and AP
-- questing for unlocking game content (and all other stuff you'll have to find out later)
+- a mix of active and idle gameplay throughout the game
+- idle adventuring mechanics, complete with RPG stats, gear drops, inventory, and loadouts
+- a storyline that slowly comes into focus as game features reveal themselves
+- multiple prestige mechanics that make replays faster and more effective
+- the mystery of the Tomes and many other surprises to discover!
 
-The game isn't complete enough for even a demo, but I'll post a link once I have something playable. In the meantime, here's the [GitHub page](https://github.com/eaglerock1337/tomeclicker) if you want to read more.
+Currently, the game is in what I would call an MVP (minimum viable product) state, which gives you a feel of the early gameplay. There should be enough gameplay for 30-60 minutes of active gameplay plus a couple of hours of idle gameplay to play through the whole demo. Feel free to try the game out at [tomeclicker.marks.dev](https://tomeclicker.marks.dev) and see how you like it!
+
+Check out the [GitHub page](https://github.com/eaglerock1337/tomeclicker) if you want to read more or if you had any suggestions or feedback to share!.
 
 ## more code
 
