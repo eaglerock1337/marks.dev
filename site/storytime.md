@@ -65,7 +65,7 @@ I learned a valuable lesson that day: you could build the best data center there
 
 <div style="text-align: center;">
 
-!["A picture of the big red EMERGENCY PULL button from an IBM System/360 mainframe."](./_media/button.jpg "You know you want to pull this. I know you want to pull this. Who the hell wouldn't want to pull this? :size=80%")<br>Production is *not* the best place to get curious.
+!["A picture of the big red EMERGENCY PULL button from an IBM System/360 mainframe."](./_media/button.jpg "You know you want to pull this. I know you want to pull this. Who the hell wouldn't want to pull this? :size=80%")<br>*Production is* not *the best place to get curious.*
 </div>
 
 Back in the year 2011, the year that famously brought us [planking](https://knowyourmeme.com/memes/planking), I was working in a global network operations center for a low-latency money market trading platform. This involved literally hundreds of servers responsible for connecting all parties worldwide. This was accomplished by letting clients connect to one of dozens of broker servers across 12 worldwide data centers (two per region), while active trades and arbitration were handled on a single [VAX](https://en.wikipedia.org/wiki/VAX) server running [OpenVMS](https://en.wikipedia.org/wiki/OpenVMS). This single server was in one of six primary data centers across 3 regions (New York, London, and Singapore) and did a follow-the-sun rotation to follow where peak trading traffic occurred. Needless to say, if something bad happened to this one server, all trading was affected worldwide, so that was an all-hands-on-deck, money-hemorrhaging, "we gotta fix this now" kind of event that senior leadership paid close attention to, and rightfully so since our [SLAs](https://en.wikipedia.org/wiki/Service-level_agreement) were very strict.
@@ -74,11 +74,11 @@ If you aren't familiar with low-latency trading and what goes into it, I can bes
 
 > "You may notice that even at peak load times our servers barely get over 5% CPU load. It's not an accident that these systems are as underused as they are. Basically, we figured out how much computing power we needed, then we basically added a zero. This would ensure that even at peak time, the systems were only running at a 10% load. Why? Because if you run a system at a 90% load, while you in theory shouldn't have any problems, there will be hiccups. All it takes is a single kernel thread to hang for a second or a tiny bit of iowait to cause a split-second delay in a production service.
 >
-> "Those occasional hiccups don't matter much to most businesses, but we aren't working with normal people. We are working with day-traders that are literally trading millions of dollars trying to beat someone else out within milliseconds. These are guys who essentially grew up playing first-person shooters who have reaction times that are insane. I remember meeting these guys on-site when a trader was trying to point out trading delays we couldn't see. I can show you the video we recorded of this guy pointing out trading delays that were less than 50 milliseconds, and that bit of time can make a huge difference in making a trade.
+> "Those occasional hiccups don't matter much to most businesses, but we aren't working with normal people. We are working with day-traders that are literally trading millions of dollars trying to beat someone else out within milliseconds. These are guys who essentially grew up playing first-person shooters who have insane reaction times. I remember meeting these guys on-site when a trader was trying to point out trading delays we couldn't see. I can show you the video we recorded of this guy pointing out trading delays that were less than 50 milliseconds, and that bit of time can make a huge difference in making a trade.
 >
 > "When a megacorp is trading billions of dollars in a single transaction, just one delay can lose ridicuous sums of money. So our clients really care about our system working and we have strict SLAs to reflect that. Too many slow trades and our clients use our platform for free for the entire day. Therefore, we need our machines to be ridiculously overpowered for the job and barely working, because it needs to work every single time."
 
-By the way, I did see that video, and it was pretty much exactly how he described it.
+By the way, I did eventually see that video, and it was pretty much exactly how he described it.
 
 The team I worked on at the time was a group of 8 sysadmins that worked in a 12-hour shift rotation. Because my team was an escalation layer and only had about an hour or two of non-incident work a day, the night shift could drag on for hours with literally nothing happening. As you can imagine, just staying awake was part of the challenge of the job. The other challenge, however, was being ready for when *shit goes down*. The workload was light because we were essentially being paid to do the right thing at the right time, every time.
 
@@ -106,7 +106,7 @@ The second lesson was a bit simpler: even though most engineers in this field ar
 
 <div style="text-align: center;">
 
-!["The Hackerman meme from Kung Fury featuring Elliot Alderson from Mr. Robot in front of a synthwave backround."](./_media/hackerman.jpg "I don't generally like to dunk on people. It really takes a special kind of character to do so. :size=80%")<br>Some people suffer from delusions of adequacy.
+!["The Hackerman meme from Kung Fury featuring Elliot Alderson from Mr. Robot in front of a synthwave backround."](./_media/hackerman.jpg "I don't generally like to dunk on people. It really takes a special kind of character to do so. :size=80%")<br>*Some people suffer from delusions of adequacy.*
 </div>
 
 This story features the same illustrious coworker from the above story, and it also takes place in 2011, the year that brought us [Nyan Cat](https://knowyourmeme.com/memes/nyan-cat). This was in the same company and same NOC which supported a low-latency money market trading platform. The NOC operated in the office 24/7/365, and featured 4 12-hour shifts: 2 daytime shifts and 2 nighttime shifts, one Monday-Wednesday, one Friday-Sunday with Thursday alternating between the two. Turnover for my group was handled at 7AM, where the two engineers going off shift would bring the 2 engineers coming on shift up to speed on anything important. It usually was pretty smooth and painless and only took 5-10 minutes on any given day.
@@ -169,7 +169,7 @@ Before we can even get into the script itself, we need to talk about this. Why t
 
 <div style="text-align: center;">
 
-!["A picture of William Hung from his audition on American Idol."](./_media/williamhung.jpg "It's quite fitting that this also happened in 2011. :size=80%")<br>[She bangs! She bangs!](https://www.youtube.com/watch?v=9RrLQUN8UJg)
+!["A picture of William Hung from his audition on American Idol."](./_media/williamhung.jpg "It's quite fitting that this also happened in 2011. :size=80%")<br>*[She bangs! She bangs!](https://www.youtube.com/watch?v=9RrLQUN8UJg)*
 </div>
 
 ```bash
@@ -255,7 +255,7 @@ Despite the chagrin of my coworker for editing his script, we were eventually ab
 
 <div style="text-align: center;">
 
-!["A warning sign featuring stick figures similar to a wet floor sign. The text reads as follows: WARNING! If the help desk things your question is stupid, we will set you on fire."](./_media/helpdesk.png "I...could set the building on fire. *grabs stapler* :size=80%")<br>A friendly reminder from your friendly neighborhood help desk.
+!["A warning sign featuring stick figures similar to a wet floor sign. The text reads as follows: WARNING! If the help desk things your question is stupid, we will set you on fire."](./_media/helpdesk.png "I...could set the building on fire. *grabs stapler* :size=80%")<br>*A friendly reminder from your friendly neighborhood help desk.*
 </div>
 
 You would think memes like this one are a bit extreme, but the help desk industry didn't get its burly, mean-tempered reputation out of nowhere. Sometimes, some people just really make you question humanity.
@@ -272,7 +272,7 @@ At this point I'm confused, and say out loud on the call, "Huh, the login worked
 
 This guy's response absolutely floored me, that to this day, I still don't believe it. Here it is, in verbatim:
 
->"No, my name is spelled correctly. However, most people spell Jeffrey with R-E-Y, so I type it that way because I thought it would log me on better."
+>"No, my name is spelled correctly. However, most people spell Jeffrey with R-E-Y, so I type it like that because it logs me on better that way."
 
 At this point, with my head *literally* in my hands, I have to ask this guy, "Can you please try spelling your name correctly?" After a few seconds, he remarks "Yes! That worked! Thanks so much for your help!"
 
