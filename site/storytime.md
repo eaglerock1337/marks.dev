@@ -214,7 +214,7 @@ echo "waiting 60 minutes ........"
 sleep 7200
 ```
 
-Ah, my favorite part of this script. We all know that [cron](https://en.wikipedia.org/wiki/Cron) is for wusses and real sysadmins keep track of arbitrary scripts running inside open terminal windows. Including the time and a comment letting the user know you're waiting is smart, since a terminal doing nothing could be misconstrued as one that is frozen. Too bad you're letting the user you're sleeping for an hour when you're really sleeping for two.
+Ah, my favorite part of this script. We all know that [cron](https://en.wikipedia.org/wiki/Cron) is for wusses and real sysadmins keep track of arbitrary scripts running inside open terminal windows. Including the time and a comment letting the user know you're waiting is smart, since a terminal doing nothing could be misconstrued as one that is frozen. Too bad you're telling the user you're sleeping for an hour when you're really sleeping for two.
 
 ```bash
 x=$(( $x + 1 ))
