@@ -272,7 +272,7 @@ At this point I'm confused, and say out loud on the call, "Huh, the login worked
 
 This guy's response absolutely floored me, that to this day, I still don't believe it. Here it is, in verbatim:
 
->"No, my name is spelled correctly. However, most people spell Jeffrey with R-E-Y, so I type it like that because it logs me on better that way."
+>"No, my name is spelled correctly. However, most people spell Jeffery with R-E-Y, so I type it like that because it logs me on better that way."
 
 At this point, with my head *literally* in my hands, I have to ask this guy, "Can you please try spelling your name correctly?" After a few seconds, he remarks "Yes! That worked! Thanks so much for your help!"
 
