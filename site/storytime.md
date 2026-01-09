@@ -10,7 +10,7 @@ I definitely have my share of stories from my time in the trenches. I'll share t
 
 Here's some of my favorite quotes from coworkers I've been fortunate enough to work beside:
 
-"Sounds like the code is ass." <sub>~ Tyler, on a fire</sub>
+"Sounds like the code is ass." <sub>~ Tyler, during an incident</sub>
 
 "Never deploy when everyone's gone home and the SREs are drunk." <sub>~ Jaron</sub>
 
@@ -102,6 +102,155 @@ So while he got away with it and that colleage became a thorn in my side for a g
 
 The second lesson was a bit simpler: even though most engineers in this field are generally smart, curious, and are constantly improving themselves, *some people just can't be taught a damn thing.*
 
+## the worst shell script I've ever seen
+
+<div style="text-align: center;">
+
+!["The Hackerman meme from Kung Fury featuring Elliot Alderson from Mr. Robot in front of a synthwave backround."](./_media/hackerman.jpg "I don't generally like to dunk on people. It really takes a special kind of character to do so. :size=80%")<br>Some people suffer from delusions of adequacy.
+</div>
+
+This story features the same illustrious coworker from the above story, and it also takes place in 2011, the year that brought us [Nyan Cat](https://knowyourmeme.com/memes/nyan-cat). This was in the same company and same NOC which supported a low-latency money market trading platform. The NOC operated in the office 24/7/365, and featured 4 12-hour shifts: 2 daytime shifts and 2 nighttime shifts, one Monday-Wednesday, one Friday-Sunday with Thursday alternating between the two. Turnover for my group was handled at 7AM, where the two engineers going off shift would bring the 2 engineers coming on shift up to speed on anything important. It usually was pretty smooth and painless and only took 5-10 minutes on any given day.
+
+Being on the day shift made my days significantly better, because I was no longer wrecked by consistent jet lag shifting between nights and days. In addition, I wasn't working along side my favorite coworker anymore, which improved the workday dramatically. I'm not a petty person or anything, but I don't appreciate having to babysit my peers, and this guy was straight up dangerous, as the last story showed. If you haven't read it, I highly recommend reading [that story first](#just-a-directory-command), as it'll give you some backstory on this coworker and the company in general.
+
+Since this is the same low-latency platform I've mentioned above, every single millisecond counted towards us meeting our [SLAs](https://en.wikipedia.org/wiki/Service-level_agreement). One day, we started seeing some slowdowns and trades. The issue wasn't happening often and wasn't affecting SLAs yet, but we wanted to get a grasp on the issue before it worsened. The issue was tracked to a particular type of server whose name was yet another three letter acronym. Since I don't want to use real names or acronyms, I'll take inspiration from [The Daily WTF](https://thedailywtf.com/) (which likes to use [Office Space](https://en.wikipedia.org/wiki/Office_Space) references in its stories) and refer to it a [TPS](https://en.wikipedia.org/wiki/TPS_report) server instead.
+
+In order to try to track down patterns of slowness, one of the regional managers requested my team to provide hourly overnight reports via email on any instances of connectivity between TPS servers taking over 100 milliseconds. This involved logging in to each one of the TPS servers in the active region and searching logs for anything that took over 100ms. Keep in mind this was 2011, so despite being a megacorp, standard practice was writing down procedures in Word documents and leveraging NOC engineers to do manual work. There were dozens of these servers worldwide, too, so logging into dozens of servers and parsing dozens of logs was pretty much imcompatible with sanity.
+
+After the first night of doing this for 12 hours on the top of every hour, the night shift wasn't too happy about this because it took the majority of the shift to log on to servers and parse logs for any signs of three-digit latency. That day, my team's manager sent out an email with a one-liner command that could be copy-pasted to speed up the process:
+
+```bash
+echo;hostname;echo;nice -19 grep 'TPS Channel, 1, [0-9][0-9][0-9],' /export/home/mdusr/tps/logs/tps_perf.log*;
+```
+
+This made things a bit easier, but as you can imagine, it still took a good amount of time to log on to dozens of servers to copy-paste the command and its output.
+
+After a couple of more nights like this, I came into work one morning, and my favorite coworker was gloating about how he wrote a script in order to fully automate the process. I knew he was really proud of it, because he was walking around and telling *every single person* in the NOC center about his script. I didn't think too much about it at the time, because the day shift didn't need to worry about these reports. A few days later, however, one of the regional managers came to me and asked for details on how the hourly reports he was receiving were generated, so I took a look at the script.
+
+As I'm sure you've guessed by now, it was bad enough for me to not only share it to some techy friends for a laugh, but it persists in my memory to this day. I now present to you the entire script exactly as my coworker wrote it, only changing names and [TLA](https://en.wikipedia.org/wiki/Three-letter_acronym)s to protect the ignorant:
+
+```bash
+#!/bin/bash
+#!
+#!
+x=0
+while [ $x -le 12 ]
+do
+#!
+rm -f /export/home/systems/tps_loop.log
+echo "/export/home/systems/tps_loop" >> /export/home/systems/tps_loop.log
+date >> /export/home/systems/tps_loop.log
+#!
+#!
+for I in `cat /export/home/systems/tps-nodes`
+do
+ssh $I "echo;hostname;echo;nice -19 grep 'TPS Channel, 1, [0-9][0-9][0-9],' /export/home/mdusr/tps/logs/tps_perf.log*;" >> /export/home/systems/tps_loop.log
+done
+
+mailx -s "TPS Latency Check" bill.lumbergh@initech.com < /export/home/systems/tps_loop.log
+
+date
+echo "waiting 60 minutes ........"
+sleep 7200
+x=$(( $x + 1 ))
+#!echo "$x"
+done
+```
+
+Let's go over this line-by-line, because [I have several questions](https://www.youtube.com/watch?v=zoMiYklHvjk).
+
+```bash
+#!/bin/bash
+#!
+#!
+```
+
+Before we can even get into the script itself, we need to talk about this. Why the hell are there so many [shebangs](https://en.wikipedia.org/wiki/Shebang_(Unix)) in this script? Shebangs not on the first line don't do anything anyway, they're just like regular comments. If they were supposed to be comments, why not just use `#` for your comment? And if that's the case, why isn't there anything on that line? Is it supposed to be an empty space? If so, why not just use an empty space? I didn't even think that comments could be this confusing, but here we are. I can say something positive here, though: [William Hung](https://www.youtube.com/watch?v=9RrLQUN8UJg) would be very proud.
+
+<div style="text-align: center;">
+
+!["A picture of William Hung from his audition on American Idol."](./_media/williamhung.jpg "It's quite fitting that this also happened in 2011. :size=80%")<br>[She bangs! She bangs!](https://www.youtube.com/watch?v=9RrLQUN8UJg)
+</div>
+
+```bash
+x=0
+while [ $x -le 12 ]
+do
+#!
+```
+
+Now we got some code that appears somewhat normal and yet another shebang...why? As to the code itself, this `while` loop annoys me, and not just for the reason you're probably thinking of if you know `bash` and read the whole script. Considering he is incrementing `$x` below, couldn't you just use a `for` loop?
+
+```bash
+rm -f /export/home/systems/tps_loop.log
+echo "/export/home/systems/tps_loop" >> /export/home/systems/tps_loop.log
+```
+
+First of all, thanks for using indentation. I don't need to keep track of code structure or anything like that. Also, using `rm -f` in a script isn't really too smart to begin with, but I fail to see the purpose of using a dangerous command to delete a file you're just going to recreate in the next line anyway. Wouldn't it be more efficient to just overwrite the file with the `>` operator instead of deleting the file and using the append operator (`>>`)? Also, is it really necessary to include the name of the script you're running in the log file? Wouldn't the fact that the log file is named after the script leave a clue? And if you did want to include the name of the script inside the file, couldn't you just use `$0` instead? What if you move the file? Then again, I really shouldn't have the expectation that he was thinking that far ahead.
+
+```bash
+date >> /export/home/systems/tps_loop.log
+#!
+#!
+```
+
+More code and TWO shebangs this time. I know William Hung sang She Bangs in 2011, the same year this script was written, but we really didn't need a homage to it in our shell scripts at work. As to the actual code itself, I think we managed to find the first line that doesn't make me cringe, outside of the fact that it's still not indented despite being inside a `while` loop.
+
+```bash
+for I in `cat /export/home/systems/tps-nodes`
+do
+ssh $I "echo;hostname;echo;nice -19 grep 'TPS Channel, 1, [0-9][0-9][0-9],' /export/home/mdusr/tps/logs/tps_perf.log*;" >> /export/home/systems/tps_loop.log
+done
+
+mailx -s "TPS Latency Check" bill.lumbergh@initech.com < /export/home/systems/tps_loop.log
+
+```
+
+Another unindented loop. Also, *now* you're using a `for` loop, when you had to use a `while` loop above?  At least you had the wherewithal to include the list of servers in a file and iterate over it, but *now* you're using blank lines instead of shebangs? It's almost like I'm watching him learn `bash` in realtime.
+
+```bash
+date
+echo "waiting 60 minutes ........"
+sleep 7200
+```
+
+Ah, my favorite part of this script. We all know that [cron](https://en.wikipedia.org/wiki/Cron) is for wusses and real sysadmins keep track of arbitrary scripts running inside open terminal windows. Including the time and a comment letting the user know you're waiting is smart, since a terminal doing nothing could be misconstrued as one that is frozen. Too bad you're letting the user you're sleeping for an hour when you're really sleeping for two.
+
+```bash
+x=$(( $x + 1 ))
+#!echo "$x"
+done
+```
+
+Now we can see what the `while` loop above was all about...letting him run the script only once per shift. The variable increment isn't ideal, but looking for `(( x++ ))` instead of `x=$(( $x + 1 ))` is more of a nit than any thing else. Instead of that, I'd much prefer you use a `for` loop, instead. And, instead of a `for` loop, I'd very much prefer using `cron` in the first place. As for the commented out line, the fact that it's commented out with a shebang is an approprate way to close this out.
+
+So yeah, that's the worst shell script I've ever seen in my professional career. Because we were still debugging the TPS servers and wanted to start tracking daytime latency as well, I eventually updated the script to run hourly via `cron` and to back up logs in a subdirectory. I also refined the output a bit more by filtering out noise and made it a bit more efficient. If you're curious, here's what I ended up with:
+
+```bash
+#!/bin/bash
+
+WORKDIR="/export/home/systems"
+LOGDIR="$WORKDIR/tps_loop_logs"
+LOGFILE="tps_loop.log"
+
+cd $WORKDIR
+echo $0 > $LOGFILE
+date >> $LOGFILE
+
+for I in `cat tps-nodes`
+   do
+      echo "$I:" >> $LOGFILE
+      ssh $I "nice -19 cat /export/home/mdusr/tps/logs/tps_perf.log* | grep TPS | egrep ', [4-9][0-9], |, [0-9][0-9][0-9], ' | grep -v ':00.'" >> $LOGFILE
+      echo "" >> $LOGFILE
+   done
+
+mailx -s "TPS Latency Check" bill.lumbergh@initech.com < $LOGFILE
+
+cp $LOGFILE $LOGDIR/$LOGFILE.`date +%Y-%m-%d-%T`
+```
+
+Despite the chagrin of my coworker for editing his script, we were eventually able to capture data that helped the developers fix the issue. So what did I learn from this experience? I learned that a little knowledge is a dangerous thing.
+
 ## names are hard
 
 <div style="text-align: center;">
@@ -123,7 +272,7 @@ At this point I'm confused, and say out loud on the call, "Huh, the login worked
 
 This guy's response absolutely floored me, that to this day, I still don't believe it. Here it is, in verbatim:
 
->"No, my name is spelled correctly. However, most people spell Jeffrey with R-E-Y, so I type it like that because it would log me on better that way."
+>"No, my name is spelled correctly. However, most people spell Jeffrey with R-E-Y, so I type it that way because I thought it would log me on better."
 
 At this point, with my head *literally* in my hands, I have to ask this guy, "Can you please try spelling your name correctly?" After a few seconds, he remarks "Yes! That worked! Thanks so much for your help!"
 
