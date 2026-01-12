@@ -84,7 +84,7 @@ The team I worked on at the time was a group of 8 sysadmins that worked in a 12-
 
 One night, I was working the night shift on a usual boring evening. During downtime, it was pretty common for us to train and practice to stay alert and to stay crisp with all critical procedures, because we sure had a lot of them. That night, we had a third sysadmin learning on the job along side myself and another experienced admin. At this point, he was working for about a month and pretty much kept quiet and to himself. The only thing that had stood out to me about him was that when he spoke about the Ctrl+Alt+Delete command, he pronounced it "Control Alternate Delete," which...was a first for me.
 
-By this point, it was early morning, during the height of trading in Asia, and it had been quiet all night. Suddenly, our monitoring TVs all lit up with red critical alarms. These were alarms I had never seen before after over a year of working there, and I saw they were for the active arbitrator. The manager on duty and I lock eyes, and I said "yep, we're gonna need a bridge...this looks like a big one." I immediately get my headset and start calling out loud that I am logging in to check, when the new hire taps my arm and says, "There's no need. That was me."
+By this point, it was early morning, during the height of trading in Asia, and it had been quiet all night. Suddenly, our monitoring TVs all lit up with red critical alarms. These were alarms I had never seen before after over a year of working there, and I saw they were for the active arbitrator. The manager on duty and I lock eyes, and I said, "yep, we're gonna need a bridge...this looks like a big one." I immediately get my headset and start calling out loud that I am logging in to check, when the new hire taps my arm and says, "There's no need. That was me."
 
 I stop and look at him, puzzled. He says, "I was running a `DIRECTORY` command. I stopped it." At this point, I look back at my computer and all of the alarms have stopped. At this point, the manager on duty is involved, who already raised the bat signal to upper management and started an incident bridge. At this point, we had a bunch of slow trades, which undoubtedly had put us under SLA level with a bunch of our clients. Ballpark estimation after the fact was lost revenue on the order of over $150,000 from this one incident. So, this put us all in a pretty big predicament.
 
@@ -115,7 +115,7 @@ Being on the day shift made my days significantly better, because I was no longe
 
 Since this is the same low-latency platform I've mentioned above, every single millisecond counted towards us meeting our [SLAs](https://en.wikipedia.org/wiki/Service-level_agreement). One day, we started seeing some slowdowns and trades. The issue wasn't happening often and wasn't affecting SLAs yet, but we wanted to get a grasp on the issue before it worsened. The issue was tracked to a particular type of server whose name was yet another three letter acronym. Since I don't want to use real names or acronyms, I'll take inspiration from [The Daily WTF](https://thedailywtf.com/) (which likes to use [Office Space](https://en.wikipedia.org/wiki/Office_Space) references in its stories) and refer to it a [TPS](https://en.wikipedia.org/wiki/TPS_report) server instead.
 
-In order to try to track down patterns of slowness, one of the regional managers requested my team to provide hourly overnight reports via email on any instances of connectivity between TPS servers taking over 100 milliseconds. This involved logging in to each one of the TPS servers in the active region and searching logs for anything that took over 100ms. Keep in mind this was 2011, so despite being a megacorp, standard practice was writing down procedures in Word documents and leveraging NOC engineers to do manual work. There were dozens of these servers worldwide, too, so logging into dozens of servers and parsing dozens of logs was pretty much imcompatible with sanity.
+In order to try to track down patterns of slowness, one of the regional managers requested my team to provide hourly overnight reports via email on any instances of connectivity between TPS servers taking over 100 milliseconds. This involved logging in to each one of the TPS servers in the active region and searching logs for anything with latency in triple digits. Keep in mind this was 2011, so despite being a megacorp, standard practice was writing down procedures in Word documents and leveraging NOC engineers to do manual work. There were dozens of these servers worldwide, too, so logging into dozens of servers and parsing dozens of logs was pretty much imcompatible with sanity.
 
 After the first night of doing this for 12 hours on the top of every hour, the night shift wasn't too happy about this because it took the majority of the shift to log on to servers and parse logs for any signs of three-digit latency. That day, my team's manager sent out an email with a one-liner command that could be copy-pasted to speed up the process:
 
@@ -165,7 +165,7 @@ Let's go over this line-by-line, because [I have several questions](https://www.
 #!
 ```
 
-Before we can even get into the script itself, we need to talk about this. Why the hell are there so many [shebangs](https://en.wikipedia.org/wiki/Shebang_(Unix)) in this script? Shebangs not on the first line don't do anything anyway, they're just like regular comments. If they were supposed to be comments, why not just use `#` for your comment? And if that's the case, why isn't there anything on that line? Is it supposed to be an empty space? If so, why not just use an empty space? I didn't even think that comments could be this confusing, but here we are. I can say something positive here, though: [William Hung](https://www.youtube.com/watch?v=9RrLQUN8UJg) would be very proud.
+Before we can even get into the script itself, we need to talk about this. Why the hell are there so many [shebangs](https://en.wikipedia.org/wiki/Shebang_(Unix)) in this script? Shebangs not on the first line don't do anything anyway, they're just like regular comments. If they were supposed to be comments, why not just use `#` for your comment? And if that's the case, why isn't there a comment at all? Is it supposed to be an empty space? If so, why not just use an empty space? I didn't even think that comments could be this confusing, but here we are. I can say something positive here, though: [William Hung](https://www.youtube.com/watch?v=9RrLQUN8UJg) would be very proud.
 
 <div style="text-align: center;">
 
@@ -179,14 +179,14 @@ do
 #!
 ```
 
-Now we got some code that appears somewhat normal and yet another shebang...why? As to the code itself, this `while` loop annoys me, and not just for the reason you're probably thinking of if you know `bash` and read the whole script. Considering he is incrementing `$x` below, couldn't you just use a `for` loop?
+Now we got some code that appears somewhat normal and yet another shebang...again, why? As to the code itself, this `while` loop annoys me, and not just for the reason you're probably thinking of if you know `bash` and read the whole script. Considering he is just incrementing `$x` below and not checking for any special conditions, couldn't you just use a `for` loop?
 
 ```bash
 rm -f /export/home/systems/tps_loop.log
 echo "/export/home/systems/tps_loop" >> /export/home/systems/tps_loop.log
 ```
 
-First of all, thanks for using indentation. I don't need to keep track of code structure or anything like that. Also, using `rm -f` in a script isn't really too smart to begin with, but I fail to see the purpose of using a dangerous command to delete a file you're just going to recreate in the next line anyway. Wouldn't it be more efficient to just overwrite the file with the `>` operator instead of deleting the file and using the append operator (`>>`)? Also, is it really necessary to include the name of the script you're running in the log file? Wouldn't the fact that the log file is named after the script leave a clue? And if you did want to include the name of the script inside the file, couldn't you just use `$0` instead? What if you move the file? Then again, I really shouldn't have the expectation that he was thinking that far ahead.
+First of all, no need for code intendtion here. I don't need to keep track of code structure or anything like that. Also, using `rm -f` in a script isn't really too smart to begin with, but I fail to see the purpose of using a dangerous command to delete a file you're just going to recreate in the next line anyway. Wouldn't it be more efficient to just rewrite the file with the overwrite operator (`>`) instead of deleting the file and using the append operator (`>>`)? Also, is it really necessary to include the name of the script you're running in the log file? Wouldn't the fact that the log file is named after the script leave a clue? And if you did want to include the name of the script inside the file, couldn't you just use `$0` instead? What if you move the script to another directory? Then again, I really shouldn't have the expectation that he was thinking that far ahead.
 
 ```bash
 date >> /export/home/systems/tps_loop.log
@@ -206,7 +206,7 @@ mailx -s "TPS Latency Check" bill.lumbergh@initech.com < /export/home/systems/tp
 
 ```
 
-Another unindented loop. Also, *now* you're using a `for` loop, when you had to use a `while` loop above?  At least you had the wherewithal to include the list of servers in a file and iterate over it, but *now* you're using blank lines instead of shebangs? It's almost like I'm watching him learn `bash` in realtime.
+Another unindented loop. Also, *now* you're using a `for` loop, when you used a `while` loop above?  At least you had the wherewithal to include the list of servers in a file and iterate over it, but *now* you're using blank lines instead of shebangs? It's almost like I'm watching him learn `bash` in realtime.
 
 ```bash
 date
@@ -214,7 +214,7 @@ echo "waiting 60 minutes ........"
 sleep 7200
 ```
 
-Ah, my favorite part of this script. We all know that [cron](https://en.wikipedia.org/wiki/Cron) is for wusses and real sysadmins keep track of arbitrary scripts running inside open terminal windows. Including the time and a comment letting the user know you're waiting is smart, since a terminal doing nothing could be misconstrued as one that is frozen. Too bad you're telling the user you're sleeping for an hour when you're really sleeping for two.
+Ah yes, my favorite part of this script. We all know that [cron](https://en.wikipedia.org/wiki/Cron) is for wusses and *real* sysadmins keep track of arbitrary scripts running inside open terminal windows. Including the time the script paused and a comment letting the user know you're waiting an hour is smart, since a running command inside a terminal like this could be misconstrued as frozen. Too bad you're telling the user you're sleeping for *one* hour when you're really sleeping for *two*.
 
 ```bash
 x=$(( $x + 1 ))
@@ -222,7 +222,7 @@ x=$(( $x + 1 ))
 done
 ```
 
-Now we can see what the `while` loop above was all about...letting him run the script only once per shift. The variable increment isn't ideal, but looking for `(( x++ ))` instead of `x=$(( $x + 1 ))` is more of a nit than any thing else. Instead of that, I'd much prefer you use a `for` loop, instead. And, instead of a `for` loop, I'd very much prefer using `cron` in the first place. As for the commented out line, the fact that it's commented out with a shebang is an approprate way to close this out.
+Now we can see what the `while` loop above was all about...letting him run the script only once per shift. The variable increment isn't ideal, but looking for `(( x++ ))` instead of `x=$(( $x + 1 ))` is more of a nit than any thing else. Instead of that, I'd much prefer you use a `for` loop, instead. And, while we're at it, instead of a `for` loop, I'd *very* much prefer using `cron` in the first place. As for the commented out line, the fact that it's commented out with a shebang is an approprate way to close this out.
 
 So yeah, that's the worst shell script I've ever seen in my professional career. Because we were still debugging the TPS servers and wanted to start tracking daytime latency as well, I eventually updated the script to run hourly via `cron` and to back up logs in a subdirectory. I also refined the output a bit more by filtering out noise and made it a bit more efficient. If you're curious, here's what I ended up with:
 
