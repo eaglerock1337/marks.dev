@@ -4,6 +4,9 @@
 - [happy little cloud](hlc)
 - [ecto-1](ecto-1)
 - [code](code)
+- [thoughts](thoughts)
+  - [on computers](thoughts/computers)
+  - [on ai](thoughts/ai)
 - [story time](storytime)
 - **Links**
   - [GitHub](https://github.com/eaglerock1337/)

@@ -6,6 +6,9 @@
 
 I definitely have my share of stories from my time in the trenches. I'll share them along as I think of them.
 
+> [!TIP]
+> Check out the underlined words and hover text on images, as there's plenty of helpful and hilarious references to find throughout!
+
 ## memorable quotes
 
 Here's some of my favorite quotes from coworkers I've been fortunate enough to work beside:
@@ -106,7 +109,7 @@ The second lesson was a bit simpler: even though most engineers in this field ar
 
 <div style="text-align: center;">
 
-!["The Hackerman meme from Kung Fury featuring Elliot Alderson from Mr. Robot in front of a synthwave backround."](./_media/hackerman.jpg "I don't generally like to dunk on people. It really takes a special kind of character to do so. :size=80%")<br>*Some people suffer from delusions of adequacy.*
+!["The Hackerman meme from Kung Fury featuring Elliot Alderson from Mr. Robot in front of a synthwave backround."](./_media/hackerman.jpg "I don't generally like to dunk on people. It really takes a special kind of character to get me to do so. :size=80%")<br>*Some people suffer from delusions of adequacy.*
 </div>
 
 This story features the same illustrious coworker from the above story, and it also takes place in 2011, the year that brought us [Nyan Cat](https://knowyourmeme.com/memes/nyan-cat). This was in the same company and same NOC which supported a low-latency money market trading platform. The NOC operated in the office 24/7/365, and featured 4 12-hour shifts: 2 daytime shifts and 2 nighttime shifts, one Monday-Wednesday, one Friday-Sunday with Thursday alternating between the two. Turnover for my group was handled at 7AM, where the two engineers going off shift would bring the 2 engineers coming on shift up to speed on anything important. It usually was pretty smooth and painless and only took 5-10 minutes on any given day.
