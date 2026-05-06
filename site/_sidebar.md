@@ -7,6 +7,7 @@
 - [thoughts](thoughts)
   - [on computers](thoughts/computers)
   - [on ai](thoughts/ai)
+  - [on open-source](thoughts/open-source)
 - [story time](storytime)
 - **Links**
   - [GitHub](https://github.com/eaglerock1337/)
