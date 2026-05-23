@@ -6,8 +6,8 @@
 - [code](code)
 - [thoughts](thoughts)
   - [on computers](thoughts/computers)
+  - [on linux-vs-windows](thoughts/linux-vs-windows)
   - [on ai](thoughts/ai)
-  - [on open-source](thoughts/open-source)
 - [story time](storytime)
 - **Links**
   - [GitHub](https://github.com/eaglerock1337/)

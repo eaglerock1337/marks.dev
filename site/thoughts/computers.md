@@ -7,7 +7,7 @@ Some thoughts on computers in general in an ever-shifting digital world.
 ## computers today
 
 <!-- markdownlint-disable MD033 -->
-<div style="text-align: center;" class="article-image-right";>
+<div style="text-align: center;" class="article-image article-image-right";>
 
 !["A picture of Karen, Plankton's computer wife from Spongebob Squarepants."](../_media/karen.jpg "Plankton: 1% evil, 99% hot gas. :size=80%")<br>*Plankton was doing the AI girlfriend<br>thing a long time ago.*
 </div>
@@ -29,7 +29,7 @@ The early form of the Internet that survived the 90s and the early 2000s was a u
 <!-- markdownlint-disable MD033 -->
 <div style="text-align: center;">
 
-[!["A picture of the classic, ubiquitous 90's computer desk."](../_media/90s-computer-desk.jpg "This was the rich family version of the 90s computer desk, but pretty much every house I can remember had some form of this when I was growing up.")<br>*Our Lady of blessed computation, don't fail me now!.*](https://www.youtube.com/watch?v=KXfUcY5r3aU)
+[!["A picture of the classic, ubiquitous 90's computer desk."](../_media/90s-computer-desk.jpg "This was the rich family version of the 90s computer desk, but pretty much every house I can remember had some form of this when I was growing up. :size=80%")<br>*Our Lady of blessed computation, don't fail me now!.*](https://www.youtube.com/watch?v=KXfUcY5r3aU)
 </div>
 
 So yeah, right from the get-go, you didn't just "go on the Internet," you had to decide it was time to use the computer, and you had to go to the area in your house devoted to the computer. Since most Internet connections in the 90s were [dial-up connections](https://en.wikipedia.org/wiki/Dial-up_Internet_access), that also meant taking over the telephone for as long as you were connected, much to the chagrin of your family members who wanted to use the telephone for telephone things.

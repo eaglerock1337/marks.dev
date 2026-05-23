@@ -1,6 +1,22 @@
-.article-image-right {
-  float: right;
-  width: 40%;
+:root {
+  --article-image-width: 40%;
+}
+
+.article-image {
   margin: 0 0 1rem 1rem;
   border-radius: 4px;
+  width: var(--article-image-width);
+}
+
+.article-image-right {
+  float: right;
+}
+
+.article-image-left {
+  float: left;
+}
+
+.article-image-right-wide {
+  float: right;
+  --article-image-width: 50%;
 }

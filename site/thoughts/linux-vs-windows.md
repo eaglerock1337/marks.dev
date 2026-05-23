@@ -16,11 +16,17 @@ I first started learning the ins-and-outs of Windows by customizing the OS as mu
 
 ### so random
 
-# TODO: pic of some meme going "so random"
+<div style="text-align: center;" class="article-image article-image-right-wide";>
+
+!["The Confused Jackie Chan meme with the text 'How are you so random'."](../_media/so-random.jpg "Jackie says it all. :size=80%")
+</div>
 
 Eventually, I would learn why things were so random once I made it to college and started my Computer Science degree. In the CS lab, we had a bunch of Windows NT computers all networked together as well as a [Sun Enterprise 450](https://unixhq.com/systems/sun-e450/) server running Solaris 8, Sun Microsystems' version of UNIX. Once I got access to the lab and was handed a little pamphlet designed to help students acclimate to UNIX, my mind was blown.
 
-# TODO: mind blown gif here from tim and eric
+<div style="text-align: center;" class="article-image article-image-left";>
+
+!["The Tim and Eric mind blown animated gif."](../_media/mind-blown.gif "Something funny :size=80%")<br>*Actual picture of me from the year 2000.*
+</div>
 
 When I started reading about and playing with UNIX, everything all of a sudden started to make sense. First of all, the filesystem was organized very differently, without arbitrary letters denoting certain disks or disk drives. Instead, every file lived under the root directory (`/`). Root was the most important directory, everything lived under it. Other hard drives would be mounted in strategic places under root, filling in a clear hierarchical structure that felt intuitive.
 
@@ -41,7 +47,7 @@ On the other hand, if you look at how Windows was born, you can see that there w
 In reality, Microsoft didn't have an OS...all they had was was a right to market an OS being developed by [Seattle Computer Products](https://en.wikipedia.org/wiki/Seattle_Computer_Products). This OS, [QDOS](https://en.wikipedia.org/wiki/86-DOS) (the Quick and Dirty Operating System), eventually renamed to 86-DOS, would handle what Microsoft was selling, and could easily be tweaked by Microsoft to handle the IBM PC. By hiding the fact that IBM would be the client behind confidentiality agreements, they managed to buy 86-DOS outright for an additional $50,000, and so started Microsoft's empire.
 
 In addition to this, Microsoft also kickstarted the sale of proprietary software. Bill Gates hated the early computing era and how enthusiasts would gladly share software with one another, enough to [make an open letter accosting people for doing so](https://en.wikipedia.org/wiki/An_Open_Letter_to_Hobbyists). When making the deal with IBM, they ensured Microsoft retained the rights to sell the OS to other clients, which enabled them to take advantage of the many IBM PC-compatible systems that would eventually be built later on, giving Microsoft even more boatloads of money for their 50 large.
-
+68
 As to why DOS was designed the way it was, it was designed to emulate the already popular [CP/M](https://en.wikipedia.org/wiki/CP/M) OS built and sold during the 8-bit the hobbyist era of computing, but it needed to ensure DOS was different enough to avoid copyright infringement. That's why backslashes were used instead of forward slashes for directories, for example...it was a corporate example of copying someone else's homework but changing it just enough to not get caught. As to why these quirks persist in Windows today, that's probably due to suits in boardrooms saying ["We've always done it this way."](https://en.wikipedia.org/wiki/Appeal_to_tradition)
 
 These changes were arbitrary, because, from a technical perspective, they *were*. They weren't made for an increase in productivity or usability, they were used to mitigate the chance of litigation, all to protect the bottom line. DOS and Windows felt like it was designed by committee, because, well, it *was* designed by committee.
